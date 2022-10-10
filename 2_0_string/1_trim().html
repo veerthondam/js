@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trim Method</title>
+</head>
+<body>
+    Trim - Removes the whitespaces, tab, etc..  <br/>
+         - returns new string, not changing the original string
+     <br/>
+     <div>
+        <p> - trimStart() </p> 
+        <p> - trimEnd() </p> 
+        <p> - trimLeft() </p> 
+        <p> - trimRight() </p> 
+     </div>    
+
+
+</body>
+<script>
+
+    let string1 = "  Hello  World ";
+    console.log(string1.length);
+
+    /* Using string, we removing the white spaces from both end */
+    
+    let string2 = string1.trim();
+    console.log(string2.length);
+
+/* trimStart() - It will remove only starting white spaces and tabs */
+
+    let string3 = string1.trimStart();
+    console.log(string3.length); //12
+
+    /* trimEnd() - It will remove only ending part of white spaces and tabs */
+
+    let string4 = string1.trimRight();
+    console.log(string4.length); //13
+
+
+
+</script>
+</html>

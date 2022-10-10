@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Includes</title>
+</head>
+<body>
+    <div>
+        The includes() method performs a case-sensitive search to be determine whether one string may be found within another string.
+        
+        <p>
+            Return value: True of False
+        </p>
+        <p>
+            Syntax:
+            <br/>
+            includes(searchString) <br/>
+            includes(searchString, position)
+        </p>
+    </div>
+    <script>
+        const str = "Hello World!";
+        chckstring = "world";
+         console.log(`${chckstring} ${str.includes(chckstring) ? 'is':'is not'} contain in the sentence..`);
+
+    </script>
+</body>
+</html>

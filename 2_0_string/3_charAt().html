@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CharAt()</title>
+</head>
+<body>
+    <div>
+        The chartAt() method returns a new string consisting of the single UTF-16 code unit located a specified offset into the string.
+    <p>str.charAt() - if no index is provided, 0 by default</p>
+    <p>
+        Return Value:
+        <br/>
+        A string representing the character at the specified index, if out of range retruns empty string.
+    </p>
+    </div>
+    <script>
+        let sentence = "Hi this is veeru, welcome to the Hanuman World!!";
+        console.log(sentence.charAt()); //H 
+        console.log(sentence.charAt(11)); //v
+        console.log(sentence.charAt(33)); //H
+        console.log(sentence.charAt(33.1)); //H
+        console.log(sentence.charAt(33.5)); //H
+        console.log(sentence.charAt(33.9)); //H
+        console.log(sentence.charAt(sentence.length-1)); //!
+        console.log(sentence.charAt(80)); //empty string
+
+
+    </script>
+</body>
+</html>

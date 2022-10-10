@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Interview Questions and Answers</title>
+</head>
+<body>
+    <b>
+        1) Let vs Var<br/>
+        2)  "== and ===" <br/>
+        3) Const
+    </b>
+    <script>
+        function hello(){
+            
+            if(true){
+                //console.log(b);
+                //console.log(a); // Error: Cannot access "a" before intialization
+                let a = 10;
+                 var b = "hello";
+            }
+
+           
+           // console.log(b);
+           //  console.log(a);  outofthe block -- //Error : Refreence Error  "a" is not defined
+            
+        }
+
+        hello();
+
+        /*Difference between == and === */
+        a="1";
+        b=1;
+        if(a==b){
+            console.log(typeof(a));
+        console.log(typeof(b));
+        }
+        
+      const x=10;
+      console.log(x);
+    //   x=1;
+    //   console.log(x);
+
+      const arr1 = [10,20,30,40];
+      arr1.push(50);
+      console.log(arr1);
+
+      const arr2 = [ {
+          id:1,
+          name:"veer"
+      },
+    {
+        id:2,
+        name: "thonda"
+    }]
+
+    arr2.push({
+        id:3,
+        name: "ff"
+    })
+    console.log(arr2);
+
+    /* null and undefined */
+    var z;
+    console.log(typeof undefind);
+    var t= null;
+    console.log(t);
+    console.log(typeof t);
+    </script>
+</body>
+</html>

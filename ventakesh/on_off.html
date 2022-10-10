@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img width="300" src="./off.jpg"/>
+    <input type="button" id="btn" value="OFF" onclick="toggle(this)">
+</body>
+<script>
+    function toggle(b){
+        if(b.value == "ON"){
+            b.value = "OFF";
+            document.querySelector("img").src="./off.jpg";
+
+        }else{
+            b.value = "ON";
+            document.querySelector("img").src="./on.jpg";
+        }
+            //b.value=(b.value=="ON")?"OFF":"ON";
+    }
+</script>
+</html>

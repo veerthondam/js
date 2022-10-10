@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .addcs{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Find the HTML elements-->
+    <p id="demo">
+        Hello thiis the first Element, we're using DOM Manipulation things....
+    </p>
+    <p id="test">
+        We're creating dom Manipulation Elements, fdsfdsf ffds
+    </p>
+
+    <!-- Example 2-->
+    <div id="main">
+        <p class="intro" name="f">
+            This is one Element
+        </p>
+        <p class="detl">
+            This is second Element
+        </p>
+        <p class="intro">
+            This is Third Element
+        </p>
+        <p class="detl">
+            This is fourth Element
+        </p>
+
+    </div>
+
+<script>
+    
+    var obj = document.getElementById("demo");
+
+    var obj1 = document.getElementsByTagName("p")
+    for(let i=0;i<obj1.length;i++){
+        obj1[i].style.background = "blue";
+    }
+
+/* Example 2 - getElementsByTagName*/
+
+var main = document.getElementById("main");
+var p_node = main.getElementsByTagName("p");
+
+for(let i=0;i<p_node.length;i++){
+    p_node[i].style.background = "yellow";
+}
+
+/*Example 3 - getelementsByClassName*/
+ var classExp = main.getElementsByClassName("intro");
+ classExp[0].style.background = "orange";
+
+ /*Example 4 - querySelector*/
+ var querySelector1 = main.querySelector("p.detl");
+    querySelector1.style.background = "black";
+    querySelector1.style.color = "white";
+
+/* Example 5 - querySelectorALL*/
+var querySelectorall = main.querySelectorAll("p.detl");
+    querySelectorall[1].style.background = "black";
+    querySelectorall[1].style.color = "white";
+
+</script>
+
+</body>
+
+</html>

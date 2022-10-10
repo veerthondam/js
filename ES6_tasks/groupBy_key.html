@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group By Tasks</title>
+</head>
+<body>
+    <script>
+        const products = [
+            {
+                pid: 100, name: 'TV', category: 'Electronics', price: 400
+            },{
+                pid: 101, name: 'mobile', category: 'Electronics', price: 450
+            },{
+                pid: 102, name: 'washing Machine', category: 'Electronics', price: 300
+            },{
+                pid: 103, name: 'TV', category: 'Electronics', price: 250
+            },{
+                pid: 104, name: 'TV', category: 'Fashion',price: 120
+            },{
+                pid:105, name: 'Tshirts', category: 'Fashion', price: 110
+            },{
+                pid: 106, name: 'Book', category: 'Education', price: 100
+            }
+        ]
+
+
+        const groupByProducts = products.reduce((group, product) => {
+          // const { category } = product;
+          const category = product.name;
+           group[category] =  group[category] ? group[category] : [];
+         //  group[category] = [];
+           group[category].push(product);
+           return group; 
+        }, {})
+
+        console.log(groupByProducts);
+    </script>
+</body>
+</html>
