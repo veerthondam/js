@@ -1,0 +1,81 @@
+[
+    {
+        "id": 1,
+        "mainCategory": "Electronics",
+        "productCategory": "Audio & video",
+        "subCategory": "Bluetooth headPhones",
+        "headphoneType": "In the Ear",
+        "inlineRemote": "Yes",
+        "Connectivity": "Bluetooth",
+        "accessoriesIncluded":"USB Charging Cable",
+        "color":"white",
+        "productDetails": [
+            {
+                "SweatProof": "No",
+                "DeepBass": "yes",
+                "WaterResistant": "No",
+                "Monaural": "No",
+                "DesignedFor": "Mobiles",
+                "WithMicrophone": "yes"
+            }
+          ],
+          "connectivityFeatures": [
+            {
+                "WirelessType": "Bluetooth",
+                "WirelessRange": "10 m",
+                "BluetoothProfiles": "A2DP",
+                "BluetoothRange": "10 m",
+                "BatteryCapacity": "1",
+                "PlayTime": "4 hrs",
+                "StandbyTime": "6 hrs"
+            }
+          ],
+            "createdAt": "2022-02-18T15:51:42.716Z",
+            "name": "TWS Wireless Bluetooth Earphone Portable Bluetooth Headset Bluetooth Headset",
+            "company": "TWS",
+            "orignalprice":1000,
+            "discountprice": 299,
+            "description": "Twins Earphone with small size, super light weight. Ensure a secure and comfortable fit for any ear. True high definition sound Equip with Bluetooth 5.0 and CVC 6.0 Noise Cancelling technology to enjoy clear fidelity phone Built-in rechargeable battery, come with a charging cable. Noise cancellation design, perfect sound quality, Sweat Proof.",
+            "image":["https://rukminim1.flixcart.com/image/416/416/jyyqc280/headphone/q/w/v/dad-originals-bluetooth-original-imaf9frbhuhxmk4h.jpeg?q=70"]
+    },
+    {
+        "id": 2,
+        "mainCategory": "Electronics",
+        "productCategory": "Audio & video",
+        "subCategory": "Bluetooth headPhones",
+        "headphoneType": "AirBass Combuds",
+        "inlineRemote": "Yes",
+        "Connectivity": "Bluetooth",
+        "accessoriesIncluded":"USB Charging Cable",
+        "color":"black",
+        "productDetails": [
+            {
+                "SweatProof": "yes",
+                "DeepBass": "yes",
+                "WaterResistant": "yes",
+                "Monaural": "yes",
+                "WithMicrophone": "yes",
+                "Foldable/Collapsible":"No"
+            }
+          ],
+          "connectivityFeatures": [
+            {
+                "WirelessType": "Bluetooth",
+                "WirelessRange": "10 m",
+                "BluetoothProfiles": "A2DP",
+                "BluetoothRange": "10 m",
+                "BatteryCapacity": "2",
+                "PlayTime": "5 hrs",
+                "StandbyTime": "6 hrs",
+                "BluetoothVersion": 5
+
+            }
+          ],
+            "createdAt": "2022-02-18T15:51:42.716Z",
+            "name": "With these Boult Earbuds, you can start and end your day on a high with all your favourite music, podcasts, and more. These earbuds ensure that passive noise is cancelled out so that you can comfortably listen to music while commuting. They make use of Bluetooth 5.0 to ensure a stable connection with smooth pairing, a good Bluetooth range, and low power consumption. With its long battery life, you can comfortably groove to all your favourite music playlists for a long time.",
+            "company": "Boult",
+            "orignal price":4999,
+            "discount Price": 1099,
+            "image":["https://rukminim1.flixcart.com/image/416/416/ku5ufm80/headphone/b/y/u/airbass-combuds-boult-audio-original-imag7cg3hxjhmega.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/ku5ufm80/headphone/v/f/j/airbass-combuds-boult-audio-original-imag7cg3xfduacxz.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/ku5ufm80/headphone/n/h/s/airbass-combuds-boult-audio-original-imag7cg3fyhm4h6p.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/ku5ufm80/headphone/g/b/d/airbass-combuds-boult-audio-original-imag7cg3yz3gv6pn.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/ku5ufm80/headphone/c/4/n/airbass-combuds-boult-audio-original-imag7cg3ur3nzfzr.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/ku5ufm80/headphone/c/w/z/airbass-combuds-boult-audio-original-imag7cg3hgyqjkj5.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/ku5ufm80/headphone/1/q/t/airbass-combuds-boult-audio-original-imag7cg3wmhbgdf5.jpeg?q=70"]
+    }
+]

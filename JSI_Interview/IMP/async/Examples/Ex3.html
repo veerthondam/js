@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <h1> Blocking UI </h1>
+    <select id="country" onchange="getCapital();">
+        <option value=""> - select country - </option>
+    </select>
+    <span id="loading_country"></span><br/><br/><br/>
+    <select id="capital">
+        <option value=""> - Select capital - </option>
+    </select>
+    <span id="loading_capital"></span><br/><br/>
+    <select id="gender">
+        <option value="male"> - male - </option>
+        <option value="male"> - Female - </option>
+    </select><br/>
+    <br/>
+    <input type="text"/>
+<script>
+    $(function(){      
+        /* display all counties*/
+        let url = `https://restcountries.com/v3.1/all`;
+       let slowUrl = `https://flash.siwalik.in/delay/{1500000}/url/${url}`;
+        $.ajax({
+                "url": url,
+                async: false,
+                cache: true,
+               beforeSend: function(){
+                $("#loading_country").html("Loading....");
+                
+               },
+                success: function(response){
+                    //for(let i=0;i<5;i++){
+                        //document.write(response[i].name.common + "---" + response[i].capital + "<br/>");
+                        // $('#country').append('<option value="'+ response[i].name.common +'">'+ response[i].name.common  +'</option>');
+                        /* show capital */
+                    //}
+
+                    response.filter(function(element,index,array){
+                        if(index<=5){
+                            $('#country').append('<option value="'+ response[index].name.common +'">'+ response[index].name.common  +'</option>');
+                        }
+                    })
+                   
+
+                    
+
+                },
+                complete: function(jqXHR,textStatus){
+                   $("#loading_country") .html('');
+                }
+              
+            })
+        })
+
+        function getCapital(){
+            var selectedVal = $('#country option:selected').val();
+            
+            let url = `https://restcountries.com/v3.1/all`;
+        $.ajax({
+                "url": url,
+                cache: true,
+               beforeSend: function(){
+                   $("#capital").find('option').not(':first').remove();//
+                   
+                $("#loading_capital").html("Loading....");
+                
+               },
+                success: function(response){
+                    //for(let i=0;i<5;i++){
+                        //document.write(response[i].name.common + "---" + response[i].capital + "<br/>");
+                        // $('#country').append('<option value="'+ response[i].name.common +'">'+ response[i].name.common  +'</option>');
+                        /* show capital */
+                    //}
+
+                    response.filter(function(element,index,array){
+                        if(index<=5){
+                            $('#capital').append('<option value="'+ response[index].capital +'">'+ response[index].capital  +'</option>');
+                        }
+                    })
+                   
+
+                    
+
+                },
+                complete: function(jqXHR,textStatus){
+                   $("#loading_capital") .html('');
+                }
+              
+            })
+                   
+        }
+
+</script>
+</body>
+</html>

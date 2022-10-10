@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red"> Prototype Object </h1>
+    <p style="font-size: x-large">
+        Prototype is a special object meant to 
+        <span style="color:red"><u> hold shared attributes and behavoirs</u> </span> of instances
+    </p>
+    <p style="font-size: x-large;">
+        Syntax:
+        <br/>
+        <span style="color:red;font-size: x-large;"> 
+            objectTypeName.prototype.sharedPropertyName=value; </span>
+    </p>
+    <p style="font-size: x-large;">
+       <pre style="font-size: x-large;color:brown">
+           function Rectangle(width,height){
+               this.width = width;
+               this.height = height;
+               this.getArea = function(){
+                   return this.width * this.height;
+               }
+               Rectangle.prototype.countV++;
+           }
+
+           Rectangle.prototype.countV = 0;
+           var rect1 = new Rectangle(5,5);
+          document.write(rect1.getArea());
+
+
+       </pre>
+       We can access our countV variable <br/>
+       document.write(rect1.countV);
+    </p>
+    <script>
+           function Rectangle(width,height){
+               this.width = width;
+               this.height = height;
+               this.getArea = function(){
+                   return this.width * this.height;
+               }
+               Rectangle.prototype.countV++;
+
+           }
+
+           Rectangle.prototype.countV = 0;
+           var rect1 = new Rectangle(5,5);
+          document.write(rect1.getArea());
+          document.write(rect1.countV);
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> There are 3 different types of Loops <br/>
+            1. Linear Loop <br/>
+            2. Quadratic loop <br/>
+            3. Cubic Loop <br/>
+    </h1> 
+
+    <h3 style="color: blue;">
+        Linear Loop:
+        <pre>
+            var n=5
+            for(var i=0;i<=n;i++){
+                //statements    // n times
+            }
+        </pre>
+    </h3>
+    <h3 style="color: blue;">
+        Quadratic Loop:
+        <pre>
+            var n=5;
+            for(var i=1;i<=n;i++){
+                for(var j<=n;j++){
+                    //statements      //n x n times
+                }
+            }
+        </pre>
+    </h3>
+    <h3 style="color: blue;">
+        Cubic Loop:
+        <pre>
+            var n=5;
+            for(var i=1;i<=n;i++){
+                for(var j=1;j<=n;j++){
+                    for(var k=1;k<=n;k++){
+                        //statements      // n x n x n times
+                    }
+                }
+            }
+        </pre>
+    </h3>
+<script>
+
+for(var i=1;i<=2;i++){
+	for(var j=1;j<=2;j++){
+  	for(var k=1;k<=2;k++){
+    	document.write(k, "<br/>");  //2x2x2 = 8
+    }
+  }
+
+}
+
+</script>
+<h3 style="color: blue;">
+    Dependent  Quadratic Loop:<br/>
+    Inner Loop iterations depend upon the outer loop counter variable.
+    <pre>
+        var n=5;
+        for(var i=1;i<=n;i++){
+            for(var j=1;j<=i;j++){
+                //statements   // n(n+1)/2 times
+            }
+        }
+    </pre>
+    
+</h3>
+<script>
+    var n=2;
+    for(var i=1;i<=n;i++){
+        for(var j=1;j<=i;j++){
+            document.write(j,"<br/>");
+        }
+    }
+</script>
+</body>
+</html>

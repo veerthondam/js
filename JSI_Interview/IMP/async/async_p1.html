@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var dataTransf = prompt("Enter number");
+        // async function hello(a){
+        //     return new Promise((resolve,reject)=>{
+        //         if(a==3){
+        //             resolve("Hello this is resolved!!!");
+        //         }else{
+        //             reject("This is rejected!!!");
+        //         }
+                
+        //     })
+        // }
+
+        // hello(dataTransf).then((data)=>{
+        //     console.log(data);
+        // }).catch((error) =>{
+        //     console.log(error)
+        // })
+        
+        /**************************************************/
+        let listingPrice = parseInt(prompt("Enter Listing Price"));
+        let sellingPrice = parseInt(prompt("Enter Selling Price"));
+        let industry = prompt("Enter Industry");
+
+    function Books(a,b,percent){
+        let discount = ((a-b)/a) * 100;
+        return discount;
+    }
+
+    function calculation(List_price,selling_price,industry){
+        if(industry == "Books"){
+            return Books(List_price,selling_price,20);
+        }
+
+    }      
+    function getProfitLoss(res){
+        if(res < 50){
+            return "profit";
+        }else{
+            return "Loss";
+        }
+    }
+   async function clc(a,b,c){
+    let result1 = await calculation(a,b,c);
+    let result2 = await getProfitLoss(result1);
+    return [result1,result2];
+
+   }
+   clc(listingPrice,sellingPrice,industry).then((data)=>{
+       document.write(`Listing Price - ${listingPrice} <br/> 
+                       Selling Price - ${sellingPrice} <br/>  
+                       Industry - ${industry} <br/>
+                       Discount: ${data[0]} <br/>
+                       Status: ${data[1]}
+                       
+       
+       `);
+   }).catch((error)=>{
+       console.log(error);
+   })
+    </script>
+</body>
+</html>

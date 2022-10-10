@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errors in Javascript</title>
+</head>
+<body>
+    <h1> Errors in Javascript </h1>
+    <div>
+        There are 3 types of Errors in Javascript
+    </div>
+    <h2>
+        1) Syntax Error -> Uncaught SyntaxError: Missing initializer in const declaration <br/>
+
+        For Ex:
+        <br/>
+        const b; <br/>
+        b=100;
+        
+        <br/>
+        
+        2) TypeError -> Assignment to constant
+        <br/>
+        const b = 100;<br/>
+        b=1000; //Error
+        
+        <br/>
+        3) Reference Error: cannot access "z" before initialization.
+        <br/>
+        <pre>
+            console.log(z); //ReferenceError: Cannot access 'z' before initialization
+        let z=10;
+        </pre>
+
+    </h2>
+    <script>
+        /* Syntax Error */
+        const b; //'const' declarations must be initialized
+        //b=100;
+
+        /* Type Error  */
+        const a=1000;
+        //a=2; //TypeError: Assignment to constant variable.
+
+        /* Reference Error */
+        console.log(z); //ReferenceError: Cannot access 'z' before initialization
+        let z=10;
+
+    </script>
+</body>
+</html>

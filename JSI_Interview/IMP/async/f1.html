@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<body>
+    <script>
+    //const element = document.querySelector('#post-request-set-headers .article-id');
+        const requestOptions = {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ "createdAt": '2022-02-18T15:51:42.716Z',
+             "name": 'ttt',
+            "avatar": "https://cdn.fakercloud.com/avatars/allthingssmitty_128.jpg",
+ })
+        };
+        fetch('https://620fdaf3ec8b2ee2834f9e07.mockapi.io/BookStore', requestOptions)
+            .then(response => response.json())
+            .then(data => console.log(data));
+    </script>
+</body>
+</html>

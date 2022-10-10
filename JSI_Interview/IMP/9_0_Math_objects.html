@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h2>Contextual Classes</h2>
+        <p>Contextual classes can be used to color table rows or table cells. The classes that can be used are: .active, .success, .info, .warning, and .danger.</p>
+        <table class="table table-hover" style="font-size: x-large;">
+          <thead>
+            <tr>
+              <th>Math Function</th>
+              <th>Descrption</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>sign(value:Number): Number </td>
+              <td>
+                <p>
+                    Returns sign of the given value,
+                    If the given value is
+                   </p> 
+                   <p>
+                     +ve returns -> 1
+                   </p>
+                   <p>
+                    -ve returns ->  -1        
+                  </p>
+                  <p>
+                    else it returns ->  0
+                  </p>
+              </td>
+              <td style="color: red;">
+               
+                    <p>
+                        document.write(Math.sign(10)) //1
+                    </p>
+                    <p>
+                        document.write(Math.sign(22)) //1
+                    </p>
+                    <p>
+                        document.write(Math.sign(-34)) //-1
+
+                    </p>
+                    <p>
+                        document.write(Math.sign("a")) //NaN
+
+                    </p>
+                    <p>
+                        document.write(Math.sign(0.023)) //1
+
+                    </p>
+                    <p>
+                        document.write(Math.sign(0)) //0
+
+                    </p>
+                
+              </td>
+            </tr>      
+            <tr class="success">
+              <td>abs(value:Number): Number</td>
+              <td> Returns the absolute value(+ve) of the given value.</td>
+              <td style="color: blue">
+                  <p>
+                    document.write(Math.abs(5)) //5
+                  </p>
+                  <p>
+                    document.write(Math.abs(-8)) //8
+                  </p>
+                  <p>
+                    document.write(Math.abs(0.897)) //0.897
+                  </p>
+                  <p>
+                    document.write(Math.abs(-0.897)) //0.897
+                  </p>
+                
+                </td>
+            </tr>
+            <tr class="danger">
+              <td>sqrt(value:Number): Number </td>
+              <td>    Returns the square root of the given value.
+            </td>
+              <td style="color: green">
+                  <p>     document.write(Math.sqrt(4)) //2
+                 </p>
+                 <p>     document.write(Math.sqrt(16)) //4
+                 </p>
+                 <p>     document.write(Math.sqrt(64)) //8
+                </p>
+              </td>
+            </tr>
+            <tr class="info">
+              <td>pow(value1:Number,value2:Number): Number</td>
+              <td>Returns the result of the value1(base) raise to the power of value2(exponent)</td>
+              <td style="color: red">
+                  <p>
+                    document.write(Math.pow(8,2)) //8*8 = 64                 
+                  </p>
+                  <p>
+                    document.write(Math.pow(7,2)) //7*7 = 49
+                  </p>
+                  <p>
+                    document.write(Math.pow(8,4)) //8*8*8*8= 4,096 
+                  </p>
+              </td>
+            </tr>
+            <tr class="warning">
+              <td>max(value1:Number,value2:Number,....valueN: Number)</td>
+              <td>Returns the maximum of zero or more values</td>
+              <td style="color: blue">       
+                  document.write(Math.max(8,4,10,40,60)) //60 
+              </td>
+            </tr>
+            <tr class="active">
+              <td>min(value1:Number,value2:Number,....valueN: Number)</td>
+              <td>Returns the maximum of zero or more values</td>
+              <td>document.write(Math.min(8,4,10,40,60)) //4 </td>
+            </tr>
+            <tr class="success">
+              <td>round(value:Number):Number</td>
+              <td>Rounds the given value to the nearest integer and return it<br/>
+              For Ex:2.2 <br/>
+              [ in the decimal part 0-4] it return 2 <br/>
+               whereas [decimal part 5-9] it returns 3
+              </td>
+              <td style="color: blue">
+                <p>
+                  document.write(Math.round(8.4)) //8
+                </p>
+                <p>
+                  document.write(Math.round(8.7)) //9
+                </p> </td>
+            </tr>
+            <tr class="danger">
+              <td>ceil(value:Number): Number </td>
+              <td>Returns the upward number, irespective of decimal part.<br/>
+                       Ex: Math.ceil(3.5) <br/>
+                       No matter of decimal part, it will take to the top number like 4. 
+            </td>
+              <td style="color: green">
+                  <p>     document.write(Math.ceil(4.1)) //5
+                 </p>
+                 <p>     document.write(Math.ceil(4.8)) //5
+                 </p>
+              </td>
+              <tr class="info">
+                <td>floor(value:Number): Number</td>
+                <td>
+                  Returns the downward number, irespective of decimal part.<br/>
+                       Ex: Math.floor(3.5) <br/>
+                       No matter of decimal part, it will take to the nearest small number like 3.
+                </td>
+                <td style="color: red">
+                    <p>
+                      document.write(Math.floor(7.3)) //7                 
+                    </p>
+                    <p>
+                      document.write(Math.floor(7.9)) //7
+                    </p>
+                </td>
+              </tr>
+            </tr>
+            <tr>
+              <td>trunc(value:Number):Number</td>
+              <td>Excludes the decimal part and returns the integer part<br/>
+              For Ex:2.8 <br/>
+             removes .8 decimal part and return 2 integer part <br/>
+               
+              </td>
+              <td style="color: blue">
+                <p>
+                  document.write(Math.trunc(9.4)) //9
+                </p>
+                <p>
+                  document.write(Math.trunc(9.9)) //9
+                </p> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+   <script>
+       document.write(Math.sign(10),"<br/>") //1
+       document.write(Math.sign(22),"<br/>") //1
+       document.write(Math.sign(-34),"<br/>") //-1
+       document.write(Math.sign("a"),"<br/>") //NaN
+       document.write(Math.sign(0.023),"<br/>") //1
+       document.write(Math.sign(0),"<br/>") //0
+
+       /* abs(value)*/
+       document.write(Math.abs(5),"<br/>") //5
+       document.write(Math.abs(-8),"<br/>") //8
+       document.write(Math.abs(0.897),"<br/>") //0.897
+       document.write(Math.abs(-0.897),"<br/>") //0.897
+
+       /* sqrt(value) */
+       document.write(Math.sqrt(4),"<br/>") //2
+       document.write(Math.sqrt(16),"<br/>") //4
+       document.write(Math.sqrt(64),"<br/>") //8
+      
+    
+       /* pow(value1,value2) */
+       document.write(Math.pow(8,2),"<br/>") //8*8 = 64
+       document.write(Math.pow(7,2),"<br/>") //7*7 = 49
+       document.write(Math.pow(8,4),"<br/>") //8*8*8*8= 4,096 
+
+       /*max value */
+       document.write(Math.max(8,4,10,40,60),"<br/>") //60 
+
+       /*min value */
+       document.write(Math.min(8,4,10,40,60),"<br/>") //4 
+      
+       /*round value */
+       document.write(Math.round(8.50),"<br/>") //8
+       document.write(Math.round(8.5),"<br/>") //9
+       document.write(Math.round(8.7),"<br/>") //9
+
+       
+       /*ceil value */
+       document.write(Math.ceil(3.1),"<br/>") //4
+       document.write(Math.ceil(3.9),"<br/>") //4
+
+          /*floor value */
+        document.write(Math.floor(3.1),"<br/>") //3
+        document.write(Math.floor(3.6),"<br/>") //3
+        document.write(Math.floor(3.9),"<br/>") //3
+
+        /*floor value */
+        document.write(Math.trunc(6.1),"<br/>") //6
+        document.write(Math.trunc(6.6),"<br/>") //6
+        document.write(Math.trunc(6.9),"<br/>") //6
+
+</script>
+</body>
+</html>

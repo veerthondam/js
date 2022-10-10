@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Local vs Global Scope</h1>
+    <div style="font-size: large;">
+        scope indicates the accessiblity and visiblity of variables.
+
+    </div>
+    <div style="font-size: larger;color: red">
+        Local Scope: <br/>
+        <p>1) Any Variable  declared inside a function is considered as in local scope.</p>
+        <p>2) Can be accessible only inside that function where it is declared</p>
+        <p>3) Local variables will be avialable only in the function execution</p>
+        <p>4) Local variables are created as soon as the control enters the function body 
+            and deleted as soon as the control exists the function body</p>
+
+    </div> 
+
+    <div style="font-size: larger;color: green">
+        Global Scope: <br/>
+        <p>1) Any Variable not declared inside a function is considered as Global scope.</p>
+        <p>2) Can be accessible any where in the script</p>
+
+    </div> 
+    <script>
+        var a=10;
+        document.write(a,"<br/>");
+
+        function display(){
+            document.write(a,"<br/>");
+            var b=20;
+            document.write(b,"<br/>");
+            
+        }
+        display();
+        document.write(b,"<br/>"); //uncaught reference error: b is not defined
+
+    </script>
+</body>
+</html>

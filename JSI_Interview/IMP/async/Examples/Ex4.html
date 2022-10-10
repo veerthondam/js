@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Example 5</h1>
+    <p>
+        <input type="text" id="country1" name="country1" value="India"/>
+    <span id="capital1"></span>
+    </p> 
+    <p>
+        <input type="text" id="country2" name="country2" value="France"/>
+        <span id="capital2"></span>
+    </p> 
+    <p>
+        <input type="text" id="country3" name="country3" value="China"/>
+        <span id="capital3"></span>
+    </p> 
+    <p>
+        <input type="text" id="country4" name="country4" value="united states of America"/>
+        <span id="capital4"></span>
+    </p> 
+    <p>
+        <input type="text" id="country5" name="country5" value="Australia"/>
+        <span id="capital5"></span>
+    </p> 
+    <p>
+        <button id="load-button"> load </button>
+    </p>
+</body>
+<script>
+$(function(){
+    $("#load-button").click(function(){
+        /*get the input value */
+        for(let i=1;i<=5;i++){
+            let value =  $("#country"+i).val();
+            let url = `https://restcountries.com/v3.1/name/${value}?fullText=true`;
+            $.ajax({
+                url: url,
+                success: function(response){
+                     $("#capital"+i).append(response[0].capital);
+
+                }
+            })
+        }
+       
+
+       
+    })
+})
+</script>
+</html>

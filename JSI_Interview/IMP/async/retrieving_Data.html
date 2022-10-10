@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let url = "https://621875f41a1ba20cbaa1982b.mockapi.io/Data";
+
+        fetch(url).then(data => {
+            return data.json();
+        }).then((post) => {   
+               post.map(function(element,index,array){
+                   element["connectivityFeatures"].map(function(ele,index,array){
+                    if(ele["BatteryCapacity"] > 1){
+                        console.log(ele);
+                    }
+                   })
+                 
+               })
+            
+        })
+    </script>
+</body>
+</html>

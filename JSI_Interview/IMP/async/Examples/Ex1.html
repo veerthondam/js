@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Example </h1>
+    <div>
+       
+            <input type="text" id="coun-name" placeholder="Enter country name"/>
+            <br/><br/>
+
+            <button onclick="loadData()">LOAD DATA</button>
+       
+        <br/>
+        <br/>
+        <div> The output is: <span id="show"> </span></div>
+    </div>
+    <script>
+        function loadData(){
+         let country = document.getElementById("coun-name").value;
+            let show = document.getElementById("show");
+            let xhttp = new XMLHttpRequest;
+            xhttp.onreadystatechange = function(){
+                if(xhttp.readyState === 4 && this.status === 200){
+                    let responseData = xhttp.responseText;
+                    let jsonData = JSON.parse(responseData);
+                    console.log(this.getResponseHeader('Date'));
+                    let capital = jsonData[0].languages.bis;
+                    show.innerHTML = capital;
+
+                }
+
+                
+            }
+            xhttp.open("GET",`https://restcountries.com/v3.1/name/${country}?fullText=true`);
+            xhttp.send();
+            console.log(xhttp.getAllResponseHeaders());
+
+           
+        }
+    </script>
+</body>
+</html>

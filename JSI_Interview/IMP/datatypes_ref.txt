@@ -1,0 +1,23 @@
+
+$, _
+
+declare variable
+ -- intialalize variable and
+
+
+constants
+
+
+typeof
+
+datatypes  - undefined, number, string, bo
+
+primitive data types - number, string and boolean
+Special Data types - undefined and null
+composite data types - objects
+
+
+
+value type -- hold the value
+
+refrence data types --- object

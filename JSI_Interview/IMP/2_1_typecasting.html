@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ParseFloat()</h1>
+    <p> Converts a given value to a float number, if not possible it will return NaN</p>
+    <h2>If a given value is of integer type, then it converts and returns 
+        equivalent float number</h2>
+    <script>
+        document.write(parseFloat(3),"<br/>") //3.0 = 3
+        document.write(parseFloat(7+7),"<br/>") //14.0 = 14
+    </script>
+    <h2>If a given value is of float type, then it returns as it is float value</h2>
+    <script>
+        document.write(parseFloat(3.6),"<br/>") //3.6
+        document.write(parseFloat(7.7+7.7),"<br/>") //15.4
+    </script>
+    <h2>If a given value is a string type, it tries to extract and 
+        return the begining float part, if not returns "NaN</h2>
+    <script>
+        document.write(parseFloat("24"),"<br/>") //24
+        document.write(parseFloat("3.1234"),"<br/>") //3.1234
+        document.write(parseFloat(".14"),"<br/>") //0.14
+        document.write(parseFloat("2.45.344"),"<br/>") //2.45
+        document.write(parseFloat("2.12+3.44"),"<br/>") //2.12 
+        document.write(parseFloat("45sometext"),"<br/>") //45
+        document.write(parseFloat("4.45sometext"),"<br/>") //4.45
+        document.write(parseFloat("sometext55"),"<br/>") //NaN
+        document.write(parseFloat("2"+"5"),"<br/>") //25
+        document.write(parseFloat("2"+"5.5"),"<br/>") //25.5
+        document.write(parseFloat("2.9"+"7.5"),"<br/>") //2.97
+        document.write(parseFloat("2+5.6"),"<br/>") //2
+        document.write(parseFloat("2.9+3.2"),"<br/>") //2.9
+        document.write(parseFloat("2"+"4.8a"),"<br/>") //24.8
+        document.write(parseFloat("8b+4.8a"),"<br/>") //8
+
+
+
+
+    </script>
+</body>
+</html>

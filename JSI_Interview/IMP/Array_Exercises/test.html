@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+        var show_Element = document.getElementById("show");
+       /*every retruns true or false */
+
+       var arr1 = [10,2,3,40,50,12,15,16,17,23,33,54,77,87,99];
+        var arr2 = [3,4,55,-8,56,59];
+        var num = 10;
+        var sum = 0;
+        var total=0;
+     document.write((["1", "2", "3"].includes(3)))
+       // false
+       /*syntax
+        arr1.every(callback, thisArgs)
+
+       */
+        function isPositive(element, index, array){
+            return element > 0;
+        }
+      //  var output = arr2.every(isPositive);
+      //  show_Element.innerHTML = output;
+        
+        /* second Way */
+      
+   var output =  arr2.every(function(element, index,array){
+        sum += element;
+       return  total = sum + this.add;
+        
+    }, {add:2})
+
+    var great_num = arr2.filter(function(element,index,array){
+          if(element>50){
+              return element;
+          }
+    })
+
+    /*Find */
+    var ne_Arr=[];
+    var great_num1 = arr2.forEach(function(element,index,array){
+          if(element>50){
+              ne_Arr.push(element);
+          }
+    })
+var total_Strength=0;
+var loc=[];
+ var obj1 = [
+     {
+     id:100,
+     name:"veer",
+     branches:["india","africa","singapore"],
+     Locations:[
+         {
+             Locid:"chennai",
+             Strength: 200
+         }
+     ]
+
+ },{
+    id:101,
+    name:"veerth",
+    branches:["india","africa","singapore"],
+    Locations:[
+         {
+             Locid:"bangalore",
+             Strength: 201
+         }
+     ]
+ },
+ {
+    id:102,
+     name:"ttveer",
+     branches:["india","africa"],
+     Locations:[
+         {
+             Locid:"hyd",
+             Strength: 200
+         }
+     ]
+
+ },{
+    id:103,
+     name:"aaaveer",
+     branches:["india","africa","g","thailand"],
+     Locations:[
+         {
+             Locid:"mumbai",
+             Strength: 200
+         }
+     ]
+
+ }
+]
+var res = obj1.map(function(element,index,array){
+//  if(element.branches.length>2){
+//      return element.id;
+//  }
+element.Locations.every(function(ele,index,array){
+   total_Strength += ele.Strength;
+    return total_Strength;
+})
+})
+show_Element.innerHTML = total_Strength;
+
+    </script>
+</body>
+</html>

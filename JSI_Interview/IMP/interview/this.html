@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-size: 22px;">
+    Scope of the function depends where function is defined<br/>
+    The value of "this" keyword is determined by how a function is called (runtime binding)
+    <h1>This Keyword  - Regular Vs Arrow Functions</h1>
+    <h2>
+        1)
+    </h2>
+    <p>
+        console.log(this) - It will pointed to Window Object.
+    </p>
+    <p>
+        Scenario 1: Create one function like below:
+         <p style="padding-left: 50px;"> 
+             
+                var age = 23; <br/>
+                function displayAge(){ <br/>
+                    console.log(this) // window Object<br/>
+                    console.log(this.age) //23 <br/>
+                } <br/>
+                
+                displayAge();
+            </p>
+         1) When we're adding variables and functions are going to the 
+         added to Window Object. In above age, display function is available under window Object.
+         <br/>
+        2) When we call displayAge(), internally it will call like <b>window.displayAge()</b>;   
+    </p>
+
+</body>
+<script>
+    /* this refers to the object that is currently calling function */
+    var age = 30;
+    function displayAge(){
+        console.log(this);
+        console.log(this.age);
+    }
+   // console.log(this)
+   // window.displayAge(); //this refers to the window Object
+    
+    // var person = {
+    //     age: 23,
+    //     displayAge:displayAge
+    // }
+    //person.displayAge(); // this refers to the person Object
+
+    var person = {
+        age: 23,
+        displayAge:displayAge,
+        nestedPerson:{
+            age: 55,
+            displayAge:displayAge
+        }
+    }
+    //person.nestedPerson.displayAge(); // this refers to the nestedperson Object
+
+
+    /*Arrow Functions*/
+
+    var per1 = {
+      age: 39,
+      greet: function(){
+          console.log("greet1", this.age);
+          console.log("greet1", this);
+          const greet2 = () => {
+              console.log("greet2", this.age);
+              console.log(this)
+          }
+          greet2()
+      }
+    }
+
+    per1.greet();
+
+    
+</script>
+</html>

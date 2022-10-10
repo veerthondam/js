@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>For In Loop</h1>
+    <div style="font-size: large;"> To traverse(or loop through) attributes of an object,
+         we use for in loop.</div> 
+    <br/>
+    <div style="font-size: large;">
+        objects represents real world entities<br/>
+        Ex: Car, Student, College, Employee, World, Company, etc..
+        <br/><br/>
+        var car={
+                model: 'Maruthi',
+                numer: '0007',
+                color: 'red'
+        }
+
+    </div><br/>
+    <div style="font-size: larger;color: red;">
+    ***Note: Objects contain collection of keys(attributes) and value(attribute value)
+     Pairs
+    </div>
+    <div style="font-size: larger;color: blue">
+    syntax:
+    <pre>
+        for(var attribute in object){
+            //statements
+        }
+    </pre>
+    </div>
+<script>
+    var student={
+        name: "veer",
+        age: 30,
+        marks: 100
+    }
+
+    for(var attribute in student){
+        console.log(attribute, ':', student[attribute]);
+    }
+
+</script>
+</body>
+</html>

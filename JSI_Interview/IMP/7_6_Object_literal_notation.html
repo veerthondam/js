@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Object Literal Notation </h1>
+    <div style="font-size: larger;">
+        Creating Objects using Object literal and object constructor are quite similar.<br/>
+        But there are some differences: <br/><br/> 
+
+        1) syntatic Difference
+        
+        <br/> 
+            var rect1 = new Object();
+            <br/>
+            var rect1 = {};
+
+    </div>
+    <br/>
+
+    <div style="font-weight:bold;font-size: x-large;color: darkred">
+        1) It Creates a new empty object - creates one memory location, called instance. <br/> <br/>
+        2)  Sets the value of implicit prototype "__proto__"(reference variable - holds the address of another location) of a new empty object to its constructor type.<br/><br/>
+        4) Returns the reference of new object
+    
+        </div>
+        <div style="font-weight:bold;font-size: x-large;color: peru">
+            Note:<br/>
+            <br/>
+          It is recommanded to use {}(object literal) 
+          <br/>
+          1) Execution speed is faster compared to object constructor. <br/>
+          2) Vulnerability in overriding Object constructor.       
+            </div>
+            <br/>
+            <br/>
+           
+            <script>
+                function Object(){
+                    return {
+                        name:"veer",
+                        "designation": "sw"
+                    }
+                }
+                var rect1 = new Object();  // Object is overrriding, were as object literal not.
+                var rect2 = {};
+
+
+                /* */
+            </script>
+
+</body>
+</html>

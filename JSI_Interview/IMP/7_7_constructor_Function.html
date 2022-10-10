@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Constructor Function</h1>
+    <div style="font-size: x-large;color: red;">
+     Why Constructor Function ?
+    
+    </div>
+    <div style="font-size: x-large;color: black;">
+        Object constructor and Object literal notations are convenient for creating single object.<br/>
+        If we want to create multiple objects of same type, we take help of Constructor function.
+       
+       </div><br/>
+       <div style="font-size: x-large;color: red;">
+      Note: <br/>
+      Creating multiple objects of same type using constructor function:
+      <p> - Reduces Code redundancy</p>
+      <p> - Less time consuming</p>
+      <p> - Easy to manage</p>
+       </div><br/>
+       <br/>
+       <div style="font-weight:bold;font-size: x-large;color: peru">
+       It is recommended for single object, if we want multiple objects, then go for constructor function 
+        <pre>
+            var rect = {
+                width = 5;
+                height = 5;
+                getArea = function(){
+                    return width*height;
+                }
+            }
+        </pre>    
+        </div><br/>
+        <div style="font-weight:bold;font-size: x-large;color: peru">
+             if we want multiple objects, then go for constructor function 
+             <pre>
+                function rectange(width,height){
+                    this.width = width;
+                    this.height = height;
+                    this.getArea = function(){
+                        return this.width * this.height; 
+                    }
+                }
+             </pre>    
+             </div>
+             <script>
+                 
+                function rectange(width,height){
+                    this.width = width;
+                    this.height = height;
+                    this.getArea=function(){
+                        return this.width*this.height; 
+                    }
+                }
+                var rect1 = new rectange(10,20);
+                document.write(rect1.getArea());
+
+                var rect2 = new rectange(4,4);
+                document.write(rect2.getArea());
+             </script>
+</body>
+</html>

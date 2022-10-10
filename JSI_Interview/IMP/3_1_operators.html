@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Expression </h1>
+    <div style='font-size: x-large;'>
+        A valid combination of operators and operands is known as Expression.
+        <br/>
+        <br/>
+        Ex: 2 + 2 <br/>
+            2 * 2 + 2 <br/><br>
+
+         Some Invalid Expression are:<br/>
+    
+        Ex: 1) +2 2 <br/>
+            2) * +2-+2
+
+
+    </div>
+
+    <h1> Operators </h1>
+    <div style='font-size: x-large;'>
+         It is going to perform an operation on the given operands
+         <p> There are three types:</p>
+         <p> 1. Unary Operator </p>
+         <p> 2. Binary Operator </p>
+         <p> 3. Ternary Operator - conditional operator(?:) </p>
+
+    </div>
+    
+    <h1> 1. Unary Operator </h1>
+    <div style='font-size: large;'>
+        A unary opeator is an operator with only one operand. This operand 
+        comes either before or after the operator.<br/>
+        The unary operators are:
+
+        <p> 1. Unary plus (+) </p>  
+         <p> 2. Unary minus (-) </p>
+         <p> 3. prefix/post fix increments (++) </p>
+         <p> 4. prefix/posfix decrements(--) </p>
+        
+         <b> 1. Unary plus (+) </b> <br/>  
+            Ex:
+         <pre>
+             let a = 10;
+             a = +a; <!--No effect it will show 10-->
+             a = -10; <!-- effect 
+                                  and it is showing "-10" -->
+
+         </pre>
+
+ <p>*** In case you apply the unary plus or minus on a non-numeric value, 
+          it performs the same conversion as the Number() function.        </p>
+    
+<pre>
+    let s='10';
+    document.write(typeof s); 
+    s=+s;
+    document.write(typeof s);
+
+    document.write(s);
+    s=-s;
+    document.write(s);
+
+</pre>
+
+<p>*** In case you apply the unary plus or minus on a boolean value, 
+    it shows 0 or 1        </p>
+
+    <pre>
+        let f = false,
+        t = true;
+        console.log(+f); // 0
+        console.log(+t); // 1
+        </pre>
+
+        </div>
+    <p>**** Pre/post increment increment and decrement </p>
+    <pre>
+        let  x = 10;
+        let j = 20;
+        c = --x+j++;
+        console.log(c)
+        console.log(j)
+    </pre>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Using Function Constructor </h1>
+     <div style="font-size: large;">
+        Functions are defined using 
+        <span style="color: red;font-size: x-large;"> "new" </span> keyword and Function Constructor. 
+    </div>
+    <div style="font-size: x-large;">
+    <pre>
+        var function_name = new Function(param1, param2,....."function_body");
+
+    </pre>
+    </div>   
+    <div style="font-size: x-large;color: red;">
+
+<script type="text/javascript">
+    /* This is without paramaeters*/
+    var demo = new Function("{ \
+            document.write('hello')\
+        }");
+
+    demo();
+
+        /* This is with paramaeters*/
+        var demo = new Function("param1","param2", "{ \
+            document.write(param1+param2)\
+        }");
+
+    demo(6,3);
+
+
+</script>
+</div>
+
+</body>
+</html>

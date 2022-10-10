@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-size: 25px">
+    <h1> Asynchronus javascript </h1>
+<!-- <div> 
+    <p> javascript is always synchronus and single-threaded</p>
+    <p> Everything runs on different thread except our code. </p>
+    <p>
+        Where do we use Async Javascript ?
+    </p>
+    <p>
+        Ajax
+        <br/>
+        setTimeOut/setInterval <br/>
+        Event Handlers
+    </p>
+</div> -->
+<div id="container">
+</div>
+<script>
+
+    const getData = async() =>{
+        var data = "Hello Async and Await11";
+        return data;
+    }
+
+    getData().then(data => console.log(data));
+
+    /* Await Function */
+
+    const getData1 = async() =>{
+        return await Promise.resolve("Hello Assync");
+        
+    } 
+
+   console.log(getData1().then((data)=> console.log(data)));
+    
+    /* Getting Response */
+
+    async function fetchApi(){
+        let response = await fetch("https://jsonplaceholder.typicode.com/todos/");
+        let userData = await response.json();
+        let displayId="";
+         userData.map((element,index,array)=>{
+            displayId += `<div id="id_1">
+                           ${element.id} - ${element.title}
+                           </div> 
+                `
+        })
+        document.getElementById("container").innerHTML = displayId;
+    }
+    fetchApi();
+</script>
+</body>
+</html>

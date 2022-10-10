@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Recursive Function </h1>
+    <h2> A function calling itself is called a Recursive function </h2>
+    <h2>
+        a) Recursive behavior: <span style="color: brown;">n! = n*(n-1)! </span>
+    </h2>
+    <h2>
+        b) Base condition: <span style="color: brown;">1! = 1 </span>
+    </h2> 
+    <h2 style="color: red; font-size: x-large">
+        Algorithm
+        <pre>
+            Func Fact(n)
+            if n==0 or n==1
+            return 1
+            else
+            return n * Fact(n-1) 
+        </pre>
+    </h2>
+ <script>
+     function fact(num){
+         if(num == 1){
+             return 1;
+         }else{
+             return num*fact(num-1);
+         }
+     }
+    //  var data = prompt("Enter the value")
+    //  var rvalue = fact(parseInt(data));
+    //  document.write(rvalue);
+
+     /* Example 2 */
+
+function displayNum(n){
+
+
+    if(n < 1){
+        return 1;
+    }
+
+    return n + displayNum(n-1);
+
+
+}
+
+var details = displayNum(5);
+
+document.write(details);
+</script>
+<script>
+    function multi(n){
+        if((n==0) || (n==1)){
+            return 1;
+        }else{
+            return n*multi(n-1);
+        }
+    
+    }
+
+    var mul = multi(5);
+    document.write(mul);
+</script>
+</body>
+</html>

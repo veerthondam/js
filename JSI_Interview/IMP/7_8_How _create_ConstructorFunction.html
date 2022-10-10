@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Constructor Function </h1>
+    <div style="font-size: larger;">
+    <p> If we want to create multiple object of same type, then we take help of 
+        constructor Function</p>
+    <p> <u>Constructor Function</u> help us to define a constructor for any 
+        <u>Object type</u>.</p>
+<br/>
+<p><b>Object type[class] </b> is a combination of its <u>constructor </u> 
+    and <u>prototype </u></p><br/>
+<p><b>Constructor </b> is a special function responsible for <u>constructing new object </u> and called as soon as new object is created</p><br/>
+<p><b>Prototype </b> is a special object contains <u>shared properties </u>
+     and called <u>behaviors</u> of instances</p><br/>
+<br/>
+<br/>
+<p>
+    Example
+
+    <pre style="font-size: x-large;color: red;">
+        function rectangle(width, height){
+            this.width = width;
+            this.height = height;
+            this.getArea = function(){
+                return this.width*this.height;
+            }
+        }
+
+        var rect1 = new rectangle(5,5);
+        var rect2 = new rectangle(6,6);
+    </pre>
+</p>
+<p>
+    In above <br/>
+    rectangle -- object type <br/>
+    function rectangle(width,height){ //somecode } -- constructor for rectangle object <br/>
+    rect1, rect2 -- objects or instances rectangle object type.<br/>
+    In background javascript engine creates <br/>
+    rectangle.prototype  -- prototype of rectangle object type.
+</p>
+</div>
+<script>
+</script>
+</body>
+</html>

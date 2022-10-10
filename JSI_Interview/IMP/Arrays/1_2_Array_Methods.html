@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Array Methods List</h1>
+    <div style="font-size: larger;">
+
+    </div>
+    <div id="content"></div>
+    <script>
+        var content = document.getElementById("content");
+        var oldArray = [5,1,9,2,3,4,6,8,11,10,17,13,15,19];
+        var newArr = [];
+        if(Array.isArray(oldArray)){
+           for(var i=0;i<oldArray.length;i++){
+               if(oldArray[i]%2!=0){
+                   newArr.push(oldArray[i]); 
+               }
+           }
+           content.innerHTML = newArr;
+        }else{
+            console.log(false);
+        }
+        
+    </script>
+</body>
+</html>

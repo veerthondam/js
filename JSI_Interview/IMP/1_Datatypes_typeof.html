@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Data types:
+     1) Primitive Data types (known as value types) 
+           - Number(holding both real numbers and intergers)
+           - Strings 
+           -boolean (true and false)
+
+     2) Special data types 
+           - undefined
+           - null
+           
+      3) Composite Data types (also known as Refrence Data types)
+         - Object
+
+         <br/>
+         <br/>
+    <script type="text/javascript">
+        var _score;
+        //document.write("The score of the player is ", _score,"<br/>");
+        document.write("The score of the player is ",typeof _score ,"<br/>");
+
+        var _score=10; //integer
+        document.write("The score of the player is ", _score,"<br/>");
+        document.write("The score of the player is ",typeof _score ,"<br/>");
+
+       const $PI=3.15; //real numbers
+        document.write("The score of the player is ", $PI,"<br/>");
+        document.write("The score of the player is ",typeof $PI ,"<br/>");
+
+        var _game="cricket"
+        document.write("The Game is ", _game,"<br/>");
+        document.write("The Game is ",typeof _game ,"<br/>");
+
+        var players_list = ["ganguly","shweag","dravid"];
+        document.write("The one of the player is ", players_list,"<br/>");
+        document.write("The one of the player is ", players_list[0],"<br/>");
+        document.write("The Game is ",typeof players_list ,"<br/>");
+
+        var bowers_list = {ganguly:2, harbhan_singh: 10}
+        document.write("Total Number of bowel list by ganguly is: ", bowers_list.ganguly,"<br/>");
+        document.write("The Game is ",typeof bowers_list ,"<br/>");
+
+        bowers_list = null;
+        document.write("The Game is ",typeof bowers_list ,"<br/>");
+        
+        
+        
+    </script>
+</body>
+</html>

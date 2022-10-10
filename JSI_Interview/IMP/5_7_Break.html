@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Break statment - It terminates the Loop</h1>
+    <h3>
+        Browser skips statements under the break statement, and transfers the control to the end of the loop(nearest) or switch case.
+    </h3>
+    <h2 style="color: red;">
+        ***Note: Break statement is used inside the switch case and looping statments.
+    </h2>
+<script>
+    for(var i=1;i<=5;i++){
+        if(i==3){
+            break;
+        }
+        document.write(i,"<br/>");
+    }
+</script>
+<h3> When to use Break?:</h3>
+<script>
+    var numbers = [10,20,30,40,50];
+    var item = 40;
+    var found=false;
+    for(var i=0;i<=5;i++){
+        if(numbers[i]==item){
+            found=true;
+            break;
+        }
+    }
+    document.write(found);
+
+</script>
+</body>
+
+</html>

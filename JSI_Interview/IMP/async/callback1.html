@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <h1> Callback 1 </h1>
+    <h4>Countries - name contains India </h4>
+    <div id="Countries-ind">
+    </div>
+    <div id="error"></div>
+    <p>
+
+    </p>
+    <h4>Countries - Language Hind </h4>
+    <div id="Countries-lang">
+    </div>
+    <div id="error"></div>
+    <p>
+        
+    </p>
+    <h4>Countries - name currency INR </h4>
+    <div id="Countries-inr">
+    </div>
+    <p>
+        
+    </p>
+    <button id="load-btn">Load Data</button>
+
+    <script>
+        $(function(){
+            $("#load-btn").click(function()
+            {
+                let url = "https://restcountries.com/v2/name/india";
+
+                $.ajax({
+                    "url": url,
+                    "success": function(result, status, xhr)
+                    {
+                        let result1 = result.map((element,index,array)=>{
+                            $("#Countries-ind").append(element.name, "<br/>");
+                        });
+
+
+                       /* get Language */ 
+                     
+                        $.ajax({
+                            "url": `https://restcountries.com/v3.1/lang/Hindi`,
+                            "success": function(result,status,xhr){
+                                         let result2 = result.map((element,index,array)=>{
+                                            $("#Countries-lang").append(element.region + " -- " +element.name['common']);
+                                });
+                            },
+                             "error": function(xhr,status,errorthrown){
+                                 $("#error").append(`Status: ${status} and Error: ${errorthrown}`)
+                           }
+                        })
+                    }, 
+                    "error": function(xhr,status,errorthrown){
+                        $("#error").append(`Status: ${status} and Error: ${errorthrown}`)
+                    }
+                })
+            }) 
+        })
+    </script>
+</body>
+</html>

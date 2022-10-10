@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+    <title>Select All</title>
+</head>
+<body>
+    <h1> Select All </h1> 
+    <div>
+        <input  type="checkbox" value="selectAll" id="selectAll" name="selectAll"/>
+        <label>
+            SelectAll
+        </label>
+    </div>
+    <div style="padding-left:10px">
+        <input type="checkbox" name="chk1" value="js">
+        <label>Javascript</label><br/>
+        <input type="checkbox" name="chk1" value="angular">
+        <label>Angular</label><br/>
+        <input type="checkbox" name="chk1" value="react">
+        <label>ReactJs</label><br/>
+        <!-- <input value="Get Values" type="button" onclick="getCheckBoxSelected()"> -->
+        <!-- <button onclick="alert(getCheckBoxSelected())">Get Values</button> -->
+        <div id="result"></div>
+    </div>
+    <script>
+        arralist = [];
+     // let selectAll = document.querySelector("[name='selectAll']");
+     // let allchk = document.querySelectorAll("[name='chk1']");
+        
+     /*For Single Item Click*/
+        let single_chkbk = document.querySelectorAll("[name='chk1']");
+        for(let i=0;i<single_chkbk.length;i++){
+            single_chkbk[i].addEventListener("click", () => {
+                if(single_chkbk[i].checked == true){
+                    arralist.push(single_chkbk[i].value);
+                document.getElementById("result").innerHTML = arralist;
+                }else{
+                    alert("fff");
+                    arralist = arralist.filter(item => item != single_chkbk[i].value);
+                    document.getElementById("result").innerHTML = arralist;
+                }
+               
+            })
+
+        }
+
+
+     /*For All */
+        document.getElementById("selectAll").addEventListener("change",() => {
+            var chckd = document.getElementById("selectAll").checked;
+            let flg = (chckd) ? true : false;
+            getCheckBoxSelected(flg);
+        })
+    
+    function getCheckBoxSelected(...args){  
+     values = [];   
+     //let checkbox = document.querySelectorAll("[name='chk1']:checked");
+     let checkbox = document.querySelectorAll("[name='chk1']");
+   for(let i=0;i<checkbox.length;i++){
+            /*code for checked All */
+        if(args[0] == true){
+            checkbox[i].checked = true;
+           values.push(checkbox[i].value);
+
+        } else{
+            checkbox[i].checked = false;
+        }
+       /*code for single check*/
+
+      
+        }
+       document.getElementById("result").innerHTML = values;
+    }
+    
+      
+       
+
+     
+     
+    </script>
+</body>
+</html>

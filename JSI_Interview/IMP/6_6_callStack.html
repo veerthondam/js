@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Call Stack</h1>
+    <div style="font-size: large;">
+        Stack is a part of memory used to keep track of function calls.
+        <br/>
+        when we call a function, that function is going to pushed on top of the stack and 
+        local variables of that function are created in the local scope.
+        <br/>
+        when a control exists a function it is going to be popped out of the stack 
+        and the created local variables of that function are deleted from the local scope. 
+    </div>
+    <script>
+        function h(){
+            document.write("h", "<br/>");
+        }
+        
+        function g(){
+            document.write("g", "<br/>");
+        }
+        
+        function f(){
+            document.write("f", "<br/>");
+        }
+        f();
+        g();
+        h();
+    </script>
+</body>
+</html>

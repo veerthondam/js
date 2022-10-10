@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Function Expression </h1>
+    <script>
+       var greetings = function (){
+            return "Hi"; //after return statement, it will jump to the end of the loop
+
+        }
+
+        document.write(greetings());
+</script>
+
+<div style="font-size: x-large;color: red;">
+    The difference between Function declartion and function expression is 
+    1) we can call a function before the function definition, 
+    where as it is not possible in function expression.
+    <br/>
+    <pre>
+        1) Function Declartion
+
+        sayHi() //there is no error
+    
+        function sayHi(){
+            document.write("Hello")
+        }
+
+        2) Function Expression
+
+        sayHi() //Error
+    
+        function sayHi(){
+            document.write("Hello")
+        }
+    </pre>
+    
+    </div>
+
+</body>
+</html>

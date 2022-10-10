@@ -1,0 +1,73 @@
+    <!DOCTYPE html>
+<htm    l lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    We can able to convert from one data type to another data type. 
+    There are two types of type casting
+    <br/>
+        1. Implicit type casting(coercion) -- (javascript engine can do) <br/>
+        2. Explicit type casting(conversion) -- (Developer can do)
+
+    <h3> Implicit Type Casting: </h3> 
+    <script type="text/javascript">
+        document.write(typeof(2+4.45),"<br/>"); //6.45
+        document.write("2"+4.45,"<br/>"); //24.45
+        document.write(4.45+"2"),"<br/>"; //24.45
+        document.write(2+4.45,"<br/>"); //6.452
+        
+        document.write("Hello " + "world " + 920) //Hello World 920
+    </script>  
+
+    <br/>
+    <h3> Explicit Type casting </h3>
+    <div>
+        For Explicit type casting, we use three type of builtin functions
+        <p>1) ParseInt()</p>
+        <p>2) ParseFloat()</p>
+        <p>3) eval()</p>
+    </div>
+<h4> 1. ParseInt(): </h4>
+<div>
+    Converts a given value to an integer, if not possible it returns <b>"NaN"</b>
+    <p>
+        <script>
+            document.write(parseInt(24),"<br/>") //24
+            document.write(parseInt(2+2),"<br/>") //4
+        </script>
+    </p>
+    <p><b> If a given value is a float type, then it discards 
+        the float part and returns the integer part of the number </b> </p>
+    <div>
+        <script type="text/javascript">
+            document.write(parseInt(3.4),"<br/>") //3
+            document.write(parseInt(3.4 + 3.4),"<br/>") //6
+            document.write(parseInt(5.9 + 5.9),"<br/>") //11
+            
+        </script>
+    </div>  
+    <p><b>If the given value is a string type, then it tries to extract and 
+        return the begining integer part, if not it will return "NAN (NOT A NUMBER)"</b></p>
+<div>
+    <script type="text/javascript">
+        document.write(parseInt("24"),"<br/>") //24
+        document.write(typeof parseInt("24"),"<br/>") //24
+        document.write(parseInt("3.123"),"<br/>") //3
+        document.write(parseInt("24Sometext"),"<br/>") //24
+        document.write(parseInt("Sometext24"),"<br/>") //NAN
+        document.write(parseInt("2"+"2"),"<br/>") //22
+        document.write(parseInt("2+2"),"<br/>") //2
+        document.write(parseInt("4sometext+2hello"),"<br/>") //4
+        document.write(parseInt("sometext4+2hello"),"<br/>") //NaN
+        document.write(parseInt(true),"<br/>") //NaN
+    
+
+    </script>
+</div>
+</div>
+</body>
+</html>

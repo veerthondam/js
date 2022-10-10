@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="font-size: x-large;">
+        Infinite Loop 
+        <br/>
+        <pre>
+            /* Get the sum of numbers using while loop */
+            var i=1;
+              while(i<=5){    
+                document.write(i,"<br/>");
+                /* If i==3, it will go into Infinite Loop
+                if(i==3){
+                   continue;
+                   
+                }  
+                i++;
+        
+              }
+               
+        
+        </pre>
+        </div>
+    <div style="font-size: x-large;">
+    Correct Answer:
+    <br/>
+    <pre>
+        /* Get the sum of numbers using while loop */
+        var i=0;
+          while(i<=5){    
+              i++;
+              
+            if(i==3){
+               continue;
+               
+            }  
+            document.write(i,"<br/>");
+    
+          }
+           
+    
+    </pre>
+    </div>
+</body>
+</html>

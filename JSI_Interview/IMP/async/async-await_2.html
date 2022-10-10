@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let origianlPrice = 3000;
+let discount = 10;
+
+  
+function getDiscount(originalPrice, discount){
+  let discounted_price = originalPrice - (originalPrice * discount / 100);
+  return discounted_price;
+}
+
+function addPoints(score){
+  if((score < 2000) && (score > 1000 )){
+    return "Hey you watch"
+  }else if((score < 3000) && (score > 2001 )){
+      return "Hey you TV";
+}
+else{
+  return "better luck next time";
+}
+}
+async function getDetails(origianlPrice,discount){
+  let getdisc = await getDiscount(origianlPrice, discount);
+  let addPoint = await addPoints(getdisc);
+  return [getdisc,addPoint];
+}
+
+
+getDetails(origianlPrice,discount).then((data) => {
+ data.map((element,index,array) => {
+   document.getElementById("header").innerHTML += element + " ";
+ })
+}).catch((error) => {
+  console.log(error);
+})
+    </script>
+</body>
+</html>

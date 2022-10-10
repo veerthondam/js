@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Adding/Deleting Properties to an Object </h1>
+    <div style="font-weight: 900;font-size: x-large;">
+    Javascript Objects are dynamic in nature.
+    I,e. we can add properties to an object at run time.
+<br/><br/>
+Syntax: 
+<br/>
+<br/>
+<span style="color: darkred;"> objectname.PropertyName = value  //dot notation.(where value can be a single data, an object, or an function.
+)</span><br/><br/>
+<span style="color: darkolivegreen;"> objectname["PropertyName"] = value  //array notation.</span><br/><br/>
+Ex: <br/>
+rect1.width = 5; // data.property : attribute <br/><br/>
+rect1.height = 5; // data.property : attribute <br/><br/>
+<pre>
+rect1.getArea = function(){ // function property : method or behavoir
+ return this.width * this.height;
+}
+  
+</pre>
+<br/><br/>
+<b> Delete an Obect </b> <br/><br/>
+     
+Syntax: <br/>
+delete ObjectName.propertyName //dot notation <br/>
+delete ObjectName["propertyName"] //array notation
+
+                                 
+
+
+</div>
+</body>
+</html>

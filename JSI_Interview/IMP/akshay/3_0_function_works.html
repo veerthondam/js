@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How js Function Works </title>
+</head>
+<body style="font-size:20px">
+    
+    <h4>How Js Function will work ?</h4> 
+    <h4>If two functions have same variable 'x', how it behaves </h4> 
+<p>
+    whenever a js program executed, it created a <b><u>Global Execution context</u></b>
+   <div>It will have two components like: </div>
+    
+    <div><b>1) Memory Component [phase -1 ]</b> - Also known as <b> Variable Environment </b> </div>
+    <div> <b>2) Code Component [phase - 2 ]</b> </div>
+</p>
+     
+<p> Before execution the single line of code, <b>Memory will allocated in the first phase </b></p>
+<h4>
+    Phase - 1 [ Memory Phase ]
+</h4>
+<p>
+    Steps: [based on below Program]
+    <b>
+    <div>
+        1) It reserved Memory for 
+         <div> x - undefined </div>
+         <div> a() - {...}  [function code]  </div>
+         <div> b() - {...}  [function code]  </div>
+         <div></div>
+         <div>This will Memory pushed into call Stack, Now Global Execution Stack is inside the Call Stack</div>
+    </div>
+    </b>
+</p>
+
+<h4>
+    Phase - 2 [ code execution Phase ]
+</h4>
+<p>
+    Steps: [based on below Program]
+    <b>
+    <div>
+        1) It runs
+         <div> x = 1 ,<del>undefined</del> <ins>1</ins> </div>
+         <div> a() - {...}  [function code] - Here, again execution context will be created,<u>limited to that function</u>whenever <sup>execution context is created</sup>, it is pushed into callstack. <b> After completed execution <del>[execution context]Memomory&code is vanished and it is poped out from the call stack</del></b>  </div>
+         <div> b() - {...}  [function code]  </div>
+         <div></div>
+         <div>This will Memory pushed into call Stack, Now Global Execution Stack is inside the Call Stack</div>
+    </div>
+    </b>
+</p>
+    <script>
+        var x = 1;
+        a(); // we can invoke the functions like before initialization because of hositing.
+        b();
+        function a(){
+            var x = 10;
+            console.log(x);
+        }
+
+        
+        function b(){
+            var x = 100;
+            console.log(x);
+        }
+
+    
+    </script>
+</body>
+</html>

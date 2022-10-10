@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get All selected checkboxes </title>
+</head>
+<body>
+    <div class="container">
+        <label>
+            <input type="checkbox" name="chk" class="checkbox" value="JS"/>javascript
+        </label><br/><br/>
+        <label>
+            <input type="checkbox" name="chk" class="checkbox" value="angular"/>Angular JS
+        </label><br/><br/>
+        <label>
+            <input type="checkbox" name="chk" class="checkbox" value="python"/>Python
+        </label><br/><br/>
+        <label>
+            <input type="checkbox" name="chk" class="checkbox" value="java"/>Java
+        </label>
+        <br/><br/><br/>
+        <button> submit </button><br/>
+        <br/>
+        <div id="result">
+
+        </div>
+    </div>
+
+    <script>
+         ListArray=[];
+         let resul = document.getElementById("result");
+        //let checkboxes = document.querySelectorAll(".checkbox");
+        let checkboxes = document.querySelectorAll("div.container [name ='chk']");
+        for(let checkbox of checkboxes){
+           checkbox.addEventListener("click",function() {
+            if(this.checked == true){
+             ListArray.push(this.value);
+             resul.innerHTML = ListArray;
+                //console.log(this.value);
+             }else{
+                ListArray = ListArray.filter((element,index) => {
+                    if(element !== this.value){
+                        return element;
+                    }
+                });
+                resul.innerHTML = ListArray;
+             }
+           
+           });
+        }
+
+</script>
+</body>
+</html>

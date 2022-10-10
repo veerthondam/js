@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>InstanceOf </h1> 
+    <div style="font-size: larger;">
+        The JavaScript instanceof operator is used to check the type of an object at the run time. It returns a boolean value(true or false). 
+    <p style="font-size: 22px">
+        Syntax: 
+        <br/>
+        var myVar = objectName instanceof objectType
+
+    </p>
+    <p>
+        Ex: 
+    <pre style="font-size: 20px">
+        var names = ["raj","ranga","suptnik"];
+    
+        console.log(names instanceOf String) //false
+        console.log(names instanceof Array) //true
+        console.log(names instanceof Number) //false
+    </pre>
+    </p>
+    </div>
+    <div style="font-size: 22px;">
+        Instanceof operator also takes inheritance into account. It returns true if the object inherits from the classes’ prototype.
+        <p style="font-size: 22px">
+            Syntax: 
+            <br/>
+            var myVar = Obj instanceof Class
+    
+        </p>
+        <p style="font-size: 22px;">
+            Ex:
+    <pre>
+        function Car(){
+            return "hello";
+        }
+
+        var new_Car = new Car();
+
+        console.log(new_Car instanceof Car)    
+    </pre>
+        </p>
+    </div>
+</body>
+</html>
+

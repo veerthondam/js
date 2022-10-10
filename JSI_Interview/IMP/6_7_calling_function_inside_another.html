@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calling Function Inside another Function </h1>
+    <script>
+        function h(){
+            document.write("H block got opened!!!","<br/>");
+
+        }
+        function g(){
+            document.write("Enter into block","<br/>");
+            h();
+            
+        }
+        function f(){
+            document.write("Hello, this is the new","<br/>");
+            g();
+        }
+
+        f();
+    </script>
+    <br/> 
+    <div>
+        Example 2
+    </div> 
+    <script>
+        function addition(num1,num2){
+            return num1+num2;
+        }
+        function multiply(num1,num2){
+            return num1*num2;
+        }
+        function decision(num1,num2, operator){
+            if(operator == "+"){
+              return addition(num1,num2);
+            }else{
+                return multiply(num1,num2);
+
+            }
+        }
+
+        var details = decision(20,30,"*");
+        document.write("The values are ", details);
+    </script>
+</body>
+</html>

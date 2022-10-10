@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" name="foo1" value="bar1">
+        Checkbox 1<br />
+        <input type="checkbox" name="foo2" value="bar2">
+        Checkbox 2<br />
+        <input type="checkbox" name="foo3" value="bar3">
+        Checkbox 3<br />
+        <input type="checkbox" name="foo4" value="bar4">
+        Checkbox 4<br />
+
+        <input type="checkbox" onclick="pilihsemua(this)" />
+        Pilih Semua<br />
+        <div id="result"></div>
+    </div>
+<script>
+       function getcheckboxes() {
+            var node_list = document.getElementsByTagName('input');
+            var checkboxes = [];
+            for (var i = 0; i < node_list.length; i++) {
+                var node = node_list[i];
+                if (node.getAttribute('type') == 'checkbox') {
+                    checkboxes.push(node);
+                }
+            }
+           
+            return checkboxes;        
+        }
+        function pilihsemua(source) {
+           
+            checkboxes = getcheckboxes();
+            for (var i = 0, n = checkboxes.length; i < n; i++) {
+               // checkboxes[i].checked = source.checked;
+               console.log(checkboxes[i]);
+            }
+           
+        };
+
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        .row {
+          margin-left:-5px;
+          margin-right:-5px;
+        }
+          
+        .column {
+          float: left;
+          width: 50%;
+          padding: 5px;
+        }
+        
+        /* Clearfix (clear floats) */
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+          width: 100%;
+          border: 1px solid #ddd;
+        }
+        
+        th, td {
+          text-align: left;
+          padding: 16px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+        </style>
+</head>
+<body>
+    <h1>Logical Operators - Used to connect one or more conditions </h1> 
+    <div style="font-size: medium;"> 
+        && - Logical And Operator: - If both LHS & RHS operands are true
+                  then the result will true otherwise false.
+
+    </div>
+    <div style="font-size: medium;"> 
+        || - OR operator - Any one of operands will be true, it is true.
+    </div>
+    
+    <div style="font-size: medium;"> 
+        ! - Logical Not operator - If the given operand is false, then the result will be true.
+    </div>
+    <br/>
+    <br/>
+<div class="row">
+  <div class="column">
+    <table>
+      <tr>
+        <th>P</th>
+        <th>Q</th>
+        <th>P && Q</th>
+      </tr>
+      <tr>
+        <td>T</td>
+        <td>T</td>
+        <td>T</td>
+      </tr>
+      <tr>
+        <td>T</td>
+        <td>F</td>
+        <td>F</td>
+      </tr>
+      <tr>
+        <td>F</td>
+        <td>T</td>
+        <td>F</td>
+      </tr>
+      <tr>
+        <td>F</td>
+        <td>F</td>
+        <td>F</td>
+      </tr>
+
+    </table>
+  </div>
+  <div class="column">
+    <table>
+      <tr>
+        <th>P</th>
+        <th>Q</th>
+        <th>P || Q</th>
+      </tr>
+      <tr>
+        <td>T</td>
+        <td>T</td>
+        <td>T</td>
+      </tr>
+      <tr>
+        <td>T</td>
+        <td>F</td>
+        <td>T</td>
+      </tr>
+      <tr>
+        <td>F</td>
+        <td>T</td>
+        <td>T</td>
+      </tr>
+      <tr>
+        <td>F</td>
+        <td>F</td>
+        <td>F</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<script>
+    document.write("&& - Logical AND Operator", "<br/>");
+    document.write((2>3) && (4<5))//false
+    document.write("<br/>");
+    document.write((20>=10) && (4<5))//true 
+    document.write("<br/>");
+    document.write(true && false)//false
+    document.write("<br/>");
+    document.write("|| - Logical OR Operator", "<br/>");
+    document.write((2>3) || (4<5))//true
+    document.write("<br/>");
+    document.write((20>=10) || (4<5))//true
+    document.write("<br/>");
+    document.write(true || false)//true
+    document.write("<br/>");
+    document.write((20>=50) || (6<5))//false
+    document.write("<br/>");
+    document.write("! - Logical NOT Operator", "<br/>");
+    document.write(!(20>=50))// fase --> true
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="font-size:large">
+        <b> For Loop: </b> Entry Control Loop
+        <br/> Browser executes the statements inside the for loop,
+         until the given condition expression<br/>
+        evaluates to false. 
+        <br/>
+        <br/>
+        <div style="background-color: red;color: aliceblue;font-size: larger;"> 
+            *** Note: Use For Loop - When you know exactly how many # of times  the loop
+        should to get exactly 
+        </div>
+    </div>
+    <br/><br/>
+    <div style="font-size: larger;">
+        syntax:
+        <b>
+            for(intialization; conditional Expression; increment/decrement)
+            <br/>{
+                <br/>
+                        &nbsp;&nbsp;statements;<br/>
+            }
+        </b>
+
+    </div>
+    <script>
+        for(var i=0;i<=5;i++){
+            document.write("Hello ", i,"<br/>"); 
+        }
+
+        //Hello world 0
+        //Hello World 1
+        //Hello World 2
+        //Hello World 3
+        //Hello World 4
+        //Hello World 5
+    </script>
+<div style="font-size: larger;">
+    Find Sum of Numers:
+</div>
+<br/>
+
+<script type="text/javascript">
+    var num=123455;
+    var _last_Digit;
+    var _sum_of_all=0;
+
+    for(var i=1;i<=10;i++){
+        _last_Digit = num%10; 
+        _sum_of_all = _sum_of_all + _last_Digit;
+        num = parseInt(num/10);
+    }
+
+    document.write(_sum_of_all);
+
+</script>
+</body>
+</html>

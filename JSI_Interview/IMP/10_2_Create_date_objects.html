@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Creating Date Objects - constructor Notation  </h1>
+    <div style="font-size: x-large;">
+        We create date objects using Date constructor Function.
+        <p>
+            <span style="color:red">1) var date1 = new Date();</span><br/>
+            Creates a date object using the system current date and time.
+            <br/><br/>
+            Ex:
+            <br/>
+            var date1 = new Date();<br/>
+            document.write(date1); //object<br/>
+            document.write(date1.toString()); //string<br/>
+            document.write(date1.toUTCString()); //string<br/>
+        </p>
+        <p>
+            <span style="color:red">2) var date2 = new Date(date:String);</span><br/>
+            Creates a date object using the given date String.
+            <br/><br/>
+            Ex:
+            <br/>
+            var date2 = new Date(Sun Jan 23 2022 22:08:42);<br/>
+            document.write(date2); <br/>
+        </p>
+        <p>
+            <span style="color:red">3) var date3 = new Date(year,month,date[,hours[,minutes[,seconds,[ms]]]]);</span><br/>
+            Creates a date object using the given date String.
+            <br/><br/>
+            Ex:
+            <br/>
+            var date3 = new Date(2022,0,23,22,18,37);<br/>
+            document.write(date3); <br/>
+        </p>
+    </div>
+    <script>
+        var date1 = new Date();
+        document.write(date1,'<br/>'); //object
+        document.write(date1.toString(),'<br/>'); //string
+        document.write(date1.toUTCString(),'<br/>'); //string
+
+        /* passing date into a new object*/
+        var date2 = new Date("Sun Jan 23 2022 22:08:42");
+        document.write(date2,"<br/>");
+
+        /* third way */
+
+        var date3 = new Date(2022, 0, 23,22,14,50);
+        document.write(date3,"<br/>");
+
+    </script>
+</body>
+</html>

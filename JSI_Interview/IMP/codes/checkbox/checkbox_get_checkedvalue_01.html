@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckBox Loop</title>
+</head>
+<body>
+   
+    <div class="container">
+        <label>
+            <input type="checkbox" value="apple">APPLE
+        </label>
+        <label>
+            <input type="checkbox" value="orange">ORANGE
+        </label>
+        <label>
+            <input type="checkbox" value="mango">MANGO
+        </label>
+        <label>
+            <input type="checkbox" value="kiwi">KIWI
+        </label>
+    </div>
+    <br/>
+    <button>show</button>
+    <h1> Result </h1>
+
+    <script>
+        let btnshow = document.querySelector("button");
+        let result = document.querySelector("h1");
+        btnshow.addEventListener("click", () => {
+            //let checkbox = document.querySelector("input[type='checkbox']:checked");
+            result.innerText = document.querySelector("input[type='checkbox']:checked").parentElement.textContent;
+           /*For Getting Single value */
+            //result.innerText = checkbox.value;
+            //result.innerText = checkbox.parentElement.textContent;
+        })
+    </script>
+</body>
+</html>

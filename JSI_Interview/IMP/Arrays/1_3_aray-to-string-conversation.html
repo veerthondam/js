@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1> Array To String Methods </h1><br/>
+    <br/>
+    <div class="container-fluid">
+                    
+        <table class="table table-hover table-bordered">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody style="font-size: larger;">
+            <tr>
+              <td><p>
+                toString()
+              </p></td>
+              <td>
+            <p>
+                The toString() method returns a string with array values separated by commas. <br/>
+                The toString() method does not change the original array.
+            </p>
+            
+            <p>
+                Syntax: <br/>
+                <span style="font-size: 18px; color: red;"> array.toString() </span>
+            </p></td>
+              <td>
+                  <p>
+                    var arr = ["veer","SW", 50000];<br/>
+                    display_data = arr.toString();<br/>
+                    document.write(display_data); //veer,SW,50000
+                 
+                  </p>
+                    
+              </td>
+            </tr>
+            <tr>
+              <td>Array - join()</td>
+              <td>
+                  <p> The <span style="font-size:19px;color:red">Join() </span> method returns an array as a String.</p>
+                  <p> The <span style="font-size:19px;color:red">Join() </span> method does not change the original array</p>
+                  <p> Any separator can be specified. The default is comma (,). </p>
+                  <p>
+                    Syntax:
+                </p>
+                <p style="color: red; font-size: 20px">
+                  array.join(separator)
+                </p>
+                </td>
+              <td>
+                <p>
+                    var arr = ["veer","SW", 50000];<br/>
+                    display_data = arr.join();<br/>
+                    document.write(display_data); //veer,SW,50000
+                    <br/>
+                    <br/>
+                    display_data = arr.join("#");
+                    document.write(display_data); //veer#SW#50000
+                 
+                  </p>
+            </td>
+            </tr>
+            <tr>
+              <td>Array - Concat() - Returns Array</td>
+              <td>
+                <p>
+                  The <span style="font-size:19px;color:red">concat()</span> method concatenates <span style="font-size:19px;color:red"> (Joins) </span> two or more arrays.
+                </p>
+                <p>
+                  It returns new array with containing th joined arrays.
+                </p>
+                <p>
+                  It will not change the exisiting arrays.
+                </p>
+                <p>
+                  Syntax:<br/>
+                  array1.concat(array2, array3, ..., arrayX)
+
+                </p>
+            </td>
+              <td>Ex:
+                <p>
+                  var arr5 = [10,20,30,40,50];<br/>
+                  var arr6 = [60,70,80,90];<br/>
+                  var result = arr5.concat(arr6);<br/>
+                  document.write(result);// 10,20,30,40,50,60,70,80,90
+</script>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>Array - Every() </td>
+              <td>
+                <p>
+                  The every() method executes a function for each array element.
+                </p>
+                <p>
+                  The every() method returns true if the function returns true for all elements.
+
+                </p>
+                <p>
+                  The arr.every() method checks whether all the elements of the array satisfy the given condition or not that is provided by a method passed to it as the argument. 
+                </p>
+                <p>
+                  Syntax:<br/>
+                 
+                 <p style="color:red; font-size: 19px">
+                  arr.every(callback(element[, index[, array]])[, thisArg])
+                <br/>
+                
+            </td>
+              <td>Ex:
+                <p>
+                  
+                  /* every Method */ <br/>
+                  sum = 0;<br/>
+                  <span style="color:red;font-size:larger">function isEven(element, index,array){</span><br/>
+                    if(element%2==0){<br/>
+                      return sum += element;<br/>
+                    }else{<br/>
+                      return sum1 -= element;<br/>
+                    }<br/>
+                  }<br/>
+                  var arr8 = [56,22,42,16,18,11,13,19,8,6];<br/>
+                  arr8.every(isEven);<br/>
+                  document.write(sum);<br/>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>Array - map() </td>
+              <td>
+                <p>
+                  map() creates a new array from calling a function for every array element.
+                </p>
+                <p>
+                  map() calls a function once for each element in an array.
+                </p>
+                <p>
+                  The arr.every() method checks whether all the elements of the array satisfy the given condition or not that is provided by a method passed to it as the argument. 
+                </p>
+                <p>
+                  Syntax:<br/>
+                 
+                 <p style="color:red; font-size: 19px">
+                  arr.every(callback(element[, index[, array]])[, thisArg])
+                <br/>
+                
+            </td>
+              <td>Ex:
+                <p>
+                  
+                  /* every Method */ <br/>
+                  sum = 0;<br/>
+                  <span style="color:red;font-size:larger">function isEven(element, index,array){</span><br/>
+                    if(element%2==0){<br/>
+                      return sum += element;<br/>
+                    }else{<br/>
+                      return sum1 -= element;<br/>
+                    }<br/>
+                  }<br/>
+                  var arr8 = [56,22,42,16,18,11,13,19,8,6];<br/>
+                  arr8.every(isEven);<br/>
+                  document.write(sum);<br/>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    
+<div id="JavaScript_holder"></div>      
+<script>
+    var display_data;
+    var JavaScript_holder = document.getElementById("JavaScript_holder");
+    /* toString() */
+    var arr = ["veer","SW", 50000];
+   // display_data = arr.toString();
+   // JavaScript_holder.innerHTML = display_data;
+/* join() */
+
+// display_data = arr.join("#");
+// JavaScript_holder.innerHTML = display_data;
+
+var vaccination_ages = [10,20,13,12,15,16,18,19,20,23,24,27,28,29,31,33,36,38];
+var result = vaccination_ages.filter(checkAge)
+
+function checkAge(age){
+  return age > 18;
+}
+//document.write(result instanceof Array);
+
+/* concat */
+var arr5 = [10,20,0,40,50];
+var arr6 = [60,70,80,90];
+var result = arr5.concat(arr6);
+// document.write(result);
+
+/* every Method - First Type */
+sum = 0;
+odd=[];
+function isEven(element, index,array){
+  if(element%2==0){
+    return sum += element;
+  }else{
+    return sum -= element;
+  }
+}
+var arr8 = [56,22,42,16,18,11,13,19,8,6];
+arr8.every(isEven);
+//document.write(sum);
+
+/*Every Method - Method type -2 */
+var even_Num = arr8.every(function(element,index,array){
+  if(element%2==0){
+    return sum += element;
+  }else{
+    return odd.push(element);
+  }
+})
+ JavaScript_holder.innerHTML = `The sum of the Even values is to be ${sum} and the odd values are ${odd}`;
+
+/* map */
+var num1 = [30,60,90,120];
+var add = 2;
+// function calb(element,index,array){
+//   return (element/2)+this.add;
+
+// }
+
+// var new_Arr = num1.map(calb,{add:5});
+
+var new_Arr = num1.map(function(element){
+  return (element/2) + add;
+}, add)
+document.write(new_Arr);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+    <title>Document</title>
+</head>
+<body>
+    <h1> Displaying Dates in Different Formats</h1>
+    <table class="table table-hover table-striped" style="font-size: x-large;">
+        <thead>
+          <tr>
+            <th>Date Function</th>
+            <th>Descrption</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr class="success">
+                <td>getTime(): Number</td>
+                <td> Returns the number of milliseconds elasped since midnight January 1,1970, universal time.</td>
+                <td style="color: blue">
+                    <p>
+                        var date1 = new Date();<br/>
+                        document.write(date1.getTime());<br/>
+                        o/p: 1642959147465
+                    </p> 
+                  </td>
+              </tr>
+              
+            <tr class="danger">
+                <td>toString(): String</td>
+                <td> Returns a string representation of the day, date, and timezone in local time</td>
+                <td style="color: black">
+                    <p>
+                        var date1 = new Date();<br/>
+                        document.write(date1.toString());<br/>
+                        o/p: Sun Jan 23 2022 23:03:11 GMT+0530 (India Standard Time)
+                    </p> 
+                  </td>
+              </tr>
+              <tr class="info">
+                <td>toUTCString(): String</td>
+                <td> Returns a string representation of the day, date, and time in universal time</td>
+                <td style="color: black">
+                    <p>
+                        var date1 = new Date();<br/>
+                        document.write(date1.toUTCString()); <br/>
+                        o/p:- Sun, 23 Jan 2022 17:33:11 GMT
+
+                    </p> 
+                  </td>
+              </tr>
+              <tr class="active">
+                <td>toDateString(): String</td>
+                <td> Returns a string representation of the day and date only, and  does not include time or timezone</td>
+                <td style="color: black">
+                    <p>
+                        var date1 = new Date();<br/>
+                        document.write(date1.toDateString());<br/>
+                        o/p:- Sun Jan 23 2022 
+                    </p> 
+                  </td>
+              </tr>
+              
+              <tr class="warning">
+                <td>toTimeString(): String</td>
+                <td> Returns a string representation of the time and timezone only, and  does not include day or date</td>
+                <td style="color: black">
+                    <p>
+                        var date1 = new Date();<br/>
+                        document.write(date1.toTimeString()); <br/>
+                        o/p:- 23:03:11 GMT+0530 (India Standard Time)
+                    </p> 
+                  </td>
+              </tr>
+              <tr class="success">
+                <td>toLocalString(): String</td>
+                <td> Returns a string representation of the day, date, time, given in local time. </td>
+                <td style="color: blue">
+                    <p>
+                        var date1 = new Date();<br/>
+                        document.write(date1.toLocalString());<br/>
+                        o/p: 1/23/2022, 11:01:55 PM
+                    </p> 
+                  </td>
+              </tr>
+              <tr class="info">
+                <td>toLocalDateString(): String</td>
+                <td> Returns a string representation of the day and date only, given in local time. </td>
+                <td style="color: blue">
+                    <p>
+                        var date1 = new Date();<br/>
+                        document.write(date1.toLocalDateString());<br/>
+                        o/p: 1/23/2022
+                    </p> 
+                  </td>
+              </tr>
+              
+              <tr class="warning">
+                <td>toLocalTimeString(): String</td>
+                <td> Returns a string representation of the time and timezone only, given in local time. </td>
+                <td style="color: blue">
+                    <p>
+                        var date1 = new Date();<br/>
+                        document.write(date1.toLocalTimeString());<br/>
+                        o/p: 11:01:55 PM
+                    </p> 
+                  </td>
+              </tr>
+        </tbody>
+    </table>
+    <script>
+        var date1 = new Date();
+        document.write(date1.getTime(),"<br/>");
+        document.write(date1.toString(),"<br/>");
+        document.write(date1.toUTCString(),"<br/>");
+        document.write(date1.toDateString(),"<br/>");
+        document.write(date1.toTimeString(),"<br/>");
+        document.write(date1.toLocaleString(),"<br/>");
+        document.write(date1.toLocaleDateString(),"<br/>");
+        document.write(date1.toLocaleTimeString(),"<br/>");
+        
+    </script>
+</body>
+</html>

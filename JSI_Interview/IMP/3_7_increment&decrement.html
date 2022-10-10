@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div style="font-weight:700;font-size:x-large;color: red;">
+    <script>
+        x=10;
+        document.write("x:",x, "<br/>"); //10
+        document.write("x++:",x++, "<br/>"); //x=10; x=10+1;
+        document.write("x:",x, "<br/>"); //11
+
+        document.write("<br/><br/>");
+
+        document.write("x: ", x,"<br/>"); //x=11
+        document.write("++x ", ++x, "<br/>"); // x=x+1; x=x; //12
+        document.write("x:",x, "<br/>"); //12
+
+
+    </script>
+   </div>
+<script>
+    var a=10
+document.write("The value of a: ", a,"<br/>");
+
+document.write("a++: ", a++,"<br/>" ); //a=10
+
+//a=a+1 ===> 11
+document.write("The value of a: ", a,"<br/>");
+
+document.write("<br/><br/>");
+        
+document.write("The value of a: ", a,"<br/>"); //11
+
+document.write("++a: ", ++a,"<br/>" ); //a=a+1 ==> a=12
+
+//a=a ===> 12
+document.write("The value of a: ", a,"<br/>");
+
+document.write("<br/><br/>");
+
+document.write("The value of a: ", a,"<br/>"); //12
+
+document.write("++a: ", a--,"<br/>" ); //a=a ==> 12
+
+//a=a-1 ===> 11
+document.write("The value of a: ", a,"<br/>");
+
+
+document.write("<br/><br/>");
+
+document.write("The value of a: ", a,"<br/>"); //11
+
+document.write("++a: ", --a,"<br/>" ); //a=a-1 ==> 10
+
+//a=a ===> 10
+document.write("The value of a: ", a,"<br/>");
+
+</script>
+</body>
+
+</html>

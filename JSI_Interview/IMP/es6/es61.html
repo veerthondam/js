@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Es6 </h1>
+    <script>
+        /* Default parameters */
+        function getHeight(){
+            return 34;
+        }
+        function param(height=getHeight(),width=40) {
+            this.height = height;
+            this.width = width;
+
+            console.log(this.width + ' -- ' + this.height);
+            
+        }
+
+        param();
+
+        /*Rest Oprator */
+
+        function sum(...args){
+            for (let index = 0; index < args.length; index++) {
+                console.log(args[index]);
+            }
+        }
+        sum(10,20,30,40,50,60,70,80);
+        
+        /*Spread Operator */
+
+        let arr1 = [10,20,30];
+        let arr2 = [40,50,60,70,80];
+        /*old way */
+        //let new_arr = arr1.concat(arr2); //for combining, we use concat method
+    
+        /* new way */
+        let new_arr = [arr1, ...arr2];
+        
+        new_arr.flat().map(function(element,index,array){
+            console.log(element);
+        })
+
+        /* object literal  - It will search for same names */
+        
+        /* old way */
+       
+        function empl(name, age){
+            return {
+                name: name,
+                age: age
+            }
+        }
+        console.log(empl("veer",34));
+
+        console.log(name);
+
+        /*new - way 1*/
+        function empl(name, age){
+            return {   // Here it will check for the names in our script, no need to declare like above
+                name,       
+                age
+            }
+        }
+        console.log(empl("v",38));
+        
+        /* scenario 3*/
+        let name_1 = "veer";
+        let age_1 = 30;
+
+        let person = {
+            name_1,
+            age_1,
+        }
+
+        console.log(person);
+
+        /*For of  - Iterate over array objects */
+
+        var personList = [
+            {
+                id: 1,
+                name: "veer",
+                age: 34
+            },
+            {
+                id: 2,
+                name: "thondamalla",
+                age: 37
+            },
+            {
+                id: 3,
+                name: "Subbarao",
+                age: 65
+            },
+            {
+                id: 4,
+                name: "bhramarambha",
+                age: 55
+            }
+    ]
+
+for(let person of personList){
+    console.log(person.id + ' --' + person.name);
+}
+</script>
+</body>
+</html>

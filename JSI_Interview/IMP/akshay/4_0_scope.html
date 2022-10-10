@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical Scope</title>
+</head>
+<body>
+    <script>
+       
+        function a(){
+            var x=10;
+            function b(){
+                y=30;
+                console.log(x);
+                console.log(y);
+            }
+            b();
+        }
+        a();
+        //console.log(x);
+
+        var a = 10;
+        let b = 20;
+        b=40;
+        const d=40;
+
+    </script>
+</body>
+</html>

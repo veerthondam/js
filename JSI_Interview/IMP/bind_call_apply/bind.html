@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bind</h1> 
+    <h2>
+        Syntax: <br/>
+        fn.bind(thisArg,[arg1[,arg2]]);
+    </h2>
+    <div style="font-size: larger;">
+        <p>The bind() method returns a new function,
+             when invoked, has its this sets to a specific value.</p>
+        <p style="color: red">
+            When and why should I use them?
+        </p>
+        <p>
+            1) To borrow another object’s methods or
+        </p>
+        <p>
+            2) To create a custom value of this
+        </p>
+    </div>
+    <br/>
+    <br/>
+    <pre style="color:red; font-size: 20px;">
+        var person1 = {
+            fname: "veer",
+            lname: "th",
+         //    printfunc: function(){
+         //        console.log(this.fname + " -- " + this.lname);
+         //    }
+        } 
+        /*
+        How can we invoke the method
+        */
+       // person1.printfunc();
+     
+        /* This is good for one object, 
+         If we want to print for another object, copy the code is bad
+         practice
+        */
+ 
+        var person2 = {
+            fname: "tulsi",
+            lname: "ram"
+        }
+        /*create one function */
+        //function borrowing
+        var printval = function(hometown){
+            console.log(this.fname + " -- " + this.lname + " -- " + hometown);
+        }
+ 
+        /* printval.call(person2, arg1, arg2, arg3 ); //parameters */
+        //printval.call(person2, "markapur"); //parameters
+ 
+ /* Apply */
+ printval.apply(person2, ["markapur"]);
+ /*Only the difference b/w call and apply is arguments need to pass as array list in apply method*/
+ 
+ /*bind - gives the copy, invokes later */
+ let res = printval.bind(person2, "markapur");
+ res();
+    </pre>
+    <script>
+       var person1 = {
+           fname: "veer",
+           lname: "th",
+        //    printfunc: function(){
+        //        console.log(this.fname + " -- " + this.lname);
+        //    }
+       } 
+       /*
+       How can we invoke the method
+       */
+      // person1.printfunc();
+    
+       /* This is good for one object, 
+        If we want to print for another object, copy the code is bad
+        practice
+       */
+
+       var person2 = {
+           fname: "tulsi",
+           lname: "ram"
+       }
+       /*create one function */
+       //function borrowing
+       var printval = function(hometown){
+           console.log(this.fname + " -- " + this.lname + " -- " + hometown);
+       }
+
+       /* printval.call(person2, arg1, arg2, arg3 ); //parameters */
+       //printval.call(person2, "markapur"); //parameters
+
+/* Apply */
+printval.apply(person2, ["markapur"]);
+/*Only the difference b/w call and apply is arguments need to pass as array list in apply method*/
+
+/*bind - gives the copy, invokes later */
+let res = printval.bind(person2, "markapur");
+res();
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<body>
+    <script>
+        var payload = {
+            "createdAt": '2022-02-18T15:51:42.716Z',
+             "name": 'bar',
+            "avatar": "https://cdn.fakercloud.com/avatars/allthingssmitty_128.jpg",
+        }
+        var data = JSON.stringify( payload );
+
+    /* POST Method */ /*https://620fdaf3ec8b2ee2834f9e07.mockapi.io/BookStore*/
+
+    fetch('https://621875f41a1ba20cbaa1982b.mockapi.io/:endpoint', {
+        method: 'post',
+         headers: {
+             'Content-Type': 'application/x-www-form-urlencoded' },
+        body: data,
+    })
+    .then((da) => {
+da.json()
+   })
+   .then((cdta)=>{
+       console.log(JSON.stringify(cdta))
+   })
+   .catch((error) => console.log(error))
+    </script>
+</body>
+</html>

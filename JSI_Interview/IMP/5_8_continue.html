@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Continue </h1>
+    <h3>
+         Browser skips statements under the continue statement,
+          and transfers the control to the condition 
+          part of the loop in the context of while and do while loops,<br/>
+           whereas in the context of forloop, 
+           control is transferred to increment/decrement part. 
+    </h3>
+    <h2 style="color: red;"> Continue Statement is used only inside the loops</h2>
+<script>
+    for(var i=1;i<=5;i++){
+        if(i==3){
+            continue;
+        }       
+       document.write(i,"<br/>");
+    }
+
+</script>
+</body>
+</html>

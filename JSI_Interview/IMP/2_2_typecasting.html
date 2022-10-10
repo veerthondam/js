@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> eVal()</h1>
+    <h3> It tries to execute the given value and 
+        return a number, otherwise it returns an error
+        <br/>
+        where value can be number, expression, string or javascript statement
+    </h3>
+    <script>
+        document.write(eval(2),"<br/>"); //2
+        document.write(parseInt(2),"<br/>"); //2
+        document.write(parseFloat(2),"<br/><br/>"); //2
+
+        document.write(eval(3.45),"<br/>"); //3.45
+        document.write(parseInt(3.45),"<br/>"); //3
+        document.write(parseFloat(3.45),"<br/><br/>"); //3.45
+
+        document.write(eval(2+2),"<br/>"); //4
+        document.write(parseInt(2+2),"<br/>"); //4
+        document.write(parseFloat(2+2),"<br/><br/>"); //4
+
+        
+        document.write(eval(2.6+2.6),"<br/>"); //5.2
+        document.write(parseInt(2.6+2.6),"<br/>"); //5
+        document.write(parseFloat(2.6+2.6),"<br/><br/>"); //5.2
+
+        //document.write(eval("24sometext"),"<br/>"); //error
+        document.write(typeof parseInt("24sometext"),"<br/>"); //24
+        document.write(parseFloat("24sometext"),"<br/><br/>"); //24
+
+        document.write(eval("2+2"),"<br/>"); //4
+        document.write(parseInt("2+2"),"<br/>"); //2
+        document.write(parseFloat("2+2"),"<br/><br/>"); //2
+
+        
+        document.write(eval("var a=10;a;"),"<br/>"); //a=10
+        document.write(parseInt("var a=10;a;"),"<br/>"); //NaN
+        document.write(parseFloat("var a=10;a;"),"<br/>"); //NaN
+
+    </script>
+</body>
+</html>
