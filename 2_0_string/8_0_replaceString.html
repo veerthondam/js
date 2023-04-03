@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace the String</title>
+</head>
+<body>
+    <script>
+        let text = "Please visit MicroSoft in india MicroSoft";
+         string1 = text.replace("MicroSoft","veer technologies");
+         string2 = text.replace(/MICROSOFT/ig,"veer technologies");
+        console.log(string1);
+        console.log(string2);
+
+        /*replaceAll*/
+        let text1 = "I love cats. Cats are very easy to love. Cats are very popular."
+
+        console.log(text1.replace(/cats/ig, "Dogs"));
+        console.log(text1.replaceAll(/cats/ig, "Dogs"));
+
+
+    </script>
+</body>
+</html>

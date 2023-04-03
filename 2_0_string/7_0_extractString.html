@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slice</title>
+</head>
+<body>
+    
+    <script>
+        let text = "apple,Banana,kiwi";
+        console.log(text.length);
+        console.log(text.slice(0)); //apple, Banana, Kiwi
+        console.log(text.slice(6)); //  Banana, Kiwi
+        console.log(text.slice(6, 11)); //Bana
+        console.log(text.slice(0, 5)); //apple
+        console.log(text.slice(-12)); //Banana, kiwi
+
+        console.log(text.slice(-12, -5)); //Banana,
+
+        /* substring*/
+
+        console.log(text.substring(0)) //apple, Banana, Kiwi
+        console.log(text.substring(6, 8)) // Ba
+        console.log(text.substring(-12, 5)); //apple
+        /* substring treats the negative index to be 0*/
+
+        /* substr */
+        string.substr(start, length)
+        console.log(text.substr(7,10)); //Banana, ki
+        console.log(text.substr(-8, 5)); //na, k
+
+     
+
+
+
+    </script>
+</body>
+</html>
