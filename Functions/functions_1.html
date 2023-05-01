@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Functions</h1>
+    <p>we can declare functions three types</p>
+    <div>
+        <p>
+            1) Function Declaration
+        </p>
+        <p>
+            2) Function Expression
+        </p>
+        <p> 
+            3) Arrow Functions
+        </p>
+
+    </div>
+
+</body>
+<script>
+
+myFunc();
+//myFnc1();
+//myFnc2();
+//myFnc3();
+//myFnc4();
+
+
+    /*Function Definition */
+    function myFunc(){
+        console.log("My Func is called")
+    }
+
+    //myFunc()
+
+    /* Function Expression - anonymous */
+    const myFnc4 = function(){
+        console.log("Function expression called");
+    }
+
+   // myFnc4();
+
+        /* Function Expression - named Functions */
+
+        const myFnc1 = function hello(){
+            console.log("Function is called....")
+        }
+
+       // myFnc1()
+
+
+  /****************************************************************/
+
+  const myFnc2 = () => {
+    console.log("This is arrow functions");
+  }
+
+  //myFnc2();
+
+  const myFnc3 = () => console.log("This is arrow function 2....");
+
+ // myFnc3();
+    </script>
+</html>
